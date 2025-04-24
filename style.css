@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero-pic {
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  position: absolute;
+  right: 0;
+}
+
+.navigation-bar {
+  padding: 10px 50px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10; /* ensures it's in front */
+}
+
+.logo-algoa {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+#algoa-bus-heading {
+  font-size: 30px;
+  color: #333;
+}
+
+#nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  z-index: 10;
+  text-decoration: none;
+}
+
+#nav-links li {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#nav-links li:hover {
+  color: #007bff;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 170px;
+}
+
+.hero-container {
+  position: relative;
+  margin: 100px 60px;
+  max-width: 50%;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  padding-bottom: 30px;
+}
+
+.hero-section p {
+  padding-bottom: 30px;
+}
+
+.hero-section button {
+  margin-right: 10px;
+  padding: 10px 20px;
+}
+
+.btn-timetable {
+  background-color: #afddff;
+  border: #afddff solid;
+  border-radius: 30px;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-timetable:hover {
+  background-color: white;
+  color: #106dab;
+  border: #afddff solid 1;
+}
+
+.btn-contact {
+  background-color: #106dab;
+  border: #106dab solid;
+  border-radius: 30px;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-contact:hover {
+  background-color: white;
+  color: #106dab;
+  border: #106dab solid 1;
+}
+
+/* ALGOA CARD SECTION */
+
+.content-section-1 {
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.content-h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.content-p {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.card-section {
+  height: 100vh;
+  display: flex;
+  margin: 50px;
+}
+
+.card {
+  background-color: #afddff;
+  width: 40%;
+  height: 350px;
+  margin: 20px;
+  padding: 50px 50px;
+  border-radius: 30px;
+}
+
+.card-h4 {
+  padding: 20px 0;
+}
+
+.card-p {
+  padding: 20px 0;
+}
+
+.card-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: #106dab solid;
+  background-color: #106dab;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-color: white;
+  border: #007bff solid;
+  color: #007bff;
+}
+
+/* STORE CARD SECTION */
+.store-card-section {
+  background-color: #ede7f6;
+}
+
+.store-card div {
+  margin-bottom: 20px;
+}
+
+/* BENTO CONTAINER SECTION */
+.bento-container {
+  background-color: #e1f5fe;
+  padding: 40px 20px;
+  display: grid;
+  gap: 20px;
+}
+
+/* ADVERTISE SECTION */
+.advertise {
+  background-color: #f8bbd0;
+  text-align: center;
+}
+
+.advertise button {
+  margin-top: 20px;
+  padding: 10px 30px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #424242;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Smartphones (up to 600px) */
+@media screen and (max-width: 600px) {
+  .hero-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .algoa-bus-heading {
+    font-size: small;
+  }
+
+  #nav-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .hero-container {
+    margin: 60px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 28px;
+  }
+
+  .hero-section p {
+    font-size: 14px;
+  }
+
+  .view-time,
+  .view-contact {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    padding: 10px;
+  }
+
+  .store-card {
+    padding: 20px 10px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* Tablets (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .hero-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  #nav-links {
+    gap: 25px;
+  }
+
+  .hero-container {
+    margin: 80px 40px;
+  }
+
+  .hero-section h1 {
+    font-size: 32px;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    margin-top: 15px;
+    padding: 15px;
+  }
+
+  .store-card {
+    padding: 30px 15px;
+  }
+}
+
+/* Desktops (1025px and up) */
+@media screen and (min-width: 1025px) {
+  .hero-section h1 {
+    font-size: 36px;
+  }
+
+  .hero-section p {
+    font-size: 18px;
+  }
+
+  .store-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+  }
+
+  .store-card > div {
+    flex: 1 1 30%;
+    margin: 20px;
+  }
+}
