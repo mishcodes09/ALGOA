@@ -505,6 +505,266 @@ body {
   }
 }
 
+/* ===== CONTACT PAGE STYLES ===== */
+.contact-main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px; /* Account for fixed navbar */
+}
+
+.contact-main h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #106dab;
+}
+
+.contact-hero {
+  background: #f5f9fc;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact-hero h2 {
+  color: #106dab;
+  margin-bottom: 1rem;
+}
+
+.contact-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+.contact-card h3 {
+  color: #106dab;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #106dab;
+  padding-bottom: 0.5rem;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.contact-table th {
+  background: #f5f5f5;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.contact-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-table tr:last-child td {
+  border-bottom: none;
+}
+
+.contact-info {
+  margin-top: 1.5rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: #106dab;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.depot-hours {
+  margin-top: 2rem;
+}
+
+.depot-hours h4 {
+  color: #106dab;
+  margin-bottom: 1rem;
+}
+
+.depot-hours ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.depot-hours li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.depot-hours li::before {
+  content: "•";
+  color: #106dab;
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-hero {
+    padding: 1.5rem;
+  }
+  
+  .contact-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-main {
+    padding: 1.5rem;
+  }
+  
+  .contact-main h1 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* ===== HIRE PAGE STYLES ===== */
+/* Main Container */
+.hire-main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px; /* Account for fixed navbar */
+}
+
+.hire-main h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #106dab;
+}
+
+/* Hero Section */
+.advertise-hero {
+  background: #f5f9fc;
+  padding: 3rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.advertise-hero h1 {
+  color: #106dab;
+  margin-bottom: 1rem;
+}
+
+.advertise-hero p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Advertising Section */
+.advertise-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.advertise-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+.advertise-card h2 {
+  color: #106dab;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: #106dab;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Benefits Section */
+.benefits-list {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.benefits-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .advertise-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .advertise-hero {
+    padding: 2rem 1.5rem;
+  }
+  
+  .advertise-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hire-main {
+    padding: 1.5rem;
+  }
+  
+  .advertise-hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
 /* ===== ADVERTISE SECTION ===== */
 .advertise {
   background-color: #f8bbd0;
