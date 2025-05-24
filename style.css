@@ -10,23 +10,21 @@ body {
   overflow-x: hidden;
 }
 
-.hero-pic {
-  margin: 0;
-  padding: 0;
-  z-index: 10;
-  position: absolute;
-  right: 0;
-}
-
+/* ===== NAVIGATION ===== */
 .navigation-bar {
-  padding: 10px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 15px 50px;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10; /* ensures it's in front */
 }
 
 .logo-algoa {
@@ -41,290 +39,582 @@ body {
 }
 
 #algoa-bus-heading {
-  font-size: 30px;
+  font-size: 1.8rem;
   color: #333;
 }
 
 #nav-links {
   display: flex;
-  gap: 40px;
+  gap: 2.5rem;
   list-style: none;
-  z-index: 10;
-  text-decoration: none;
 }
 
-#nav-links li {
-  font-size: 16px;
+#nav-links a {
+  text-decoration: none;
   color: #333;
-  cursor: pointer;
+  font-size: 1rem;
   transition: color 0.3s;
 }
 
-#nav-links li:hover {
+#nav-links a:hover {
   color: #007bff;
 }
 
-/* HERO SECTION */
+/* ===== HERO SECTION ===== */
+body {
+  position: relative;
+  overflow-x: hidden;
+}
 
 .hero-section {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 170px;
+  padding: 100px 50px;
+  position: relative;
+  background: white;
+  margin-top: 80px; /* Space for navbar */
 }
 
 .hero-container {
-  position: relative;
-  margin: 100px 60px;
-  max-width: 50%;
+  flex: 1;
+  max-width: 600px;
+  z-index: 2;
 }
 
+.hero-pic {
+  width: 45%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 50px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 60px 30px;
+    margin-top: 60px;
+  }
+  
+  .hero-pic {
+    width: 80%;
+    margin: 40px 0 0 0;
+    order: 2;
+  }
+  
+  .hero-container {
+    order: 1;
+  }
+}
 .hero-section h1 {
-  font-size: 36px;
-  padding-bottom: 30px;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section h1 span {
+  color: #106dab;
 }
 
 .hero-section p {
-  padding-bottom: 30px;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
 }
 
-.hero-section button {
-  margin-right: 10px;
-  padding: 10px 20px;
+.timetable-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-timetable, 
+.btn-contact {
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .btn-timetable {
   background-color: #afddff;
-  border: #afddff solid;
-  border-radius: 30px;
-  transition: all 200ms ease-in-out;
+  border: 1px solid #afddff;
+  color: #106dab;
 }
 
 .btn-timetable:hover {
   background-color: white;
-  color: #106dab;
-  border: #afddff solid 1;
+  border-color: #106dab;
 }
 
 .btn-contact {
   background-color: #106dab;
-  border: #106dab solid;
-  border-radius: 30px;
+  border: 1px solid #106dab;
   color: white;
-  transition: all 200ms ease-in-out;
 }
 
 .btn-contact:hover {
   background-color: white;
   color: #106dab;
-  border: #106dab solid 1;
 }
 
-/* ALGOA CARD SECTION */
-
+/* ===== CARDS SECTION ===== */
 .content-section-1 {
-  background-color: #ffffff;
-  height: 100vh;
+  padding: 4rem 3rem;
+  background-color: white;
 }
 
 .content-h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .content-p {
   text-align: center;
-  padding-top: 20px;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 3rem;
 }
 
 .card-section {
-  height: 100vh;
   display: flex;
-  margin: 50px;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
 }
 
 .card {
-  background-color: #afddff;
-  width: 40%;
-  height: 350px;
-  margin: 20px;
-  padding: 50px 50px;
-  border-radius: 30px;
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.card .icon {
+  margin-bottom: 1rem;
 }
 
 .card-h4 {
-  padding: 20px 0;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .card-p {
-  padding: 20px 0;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
 
 .card-btn {
   width: 100%;
-  padding: 15px;
-  border-radius: 30px;
-  border: #106dab solid;
+  padding: 0.75rem;
+  border-radius: 2rem;
+  border: 1px solid #106dab;
   background-color: #106dab;
   color: white;
-  transition: all 200ms ease-in-out;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .card-btn:hover {
   background-color: white;
-  border: #007bff solid;
   color: #007bff;
 }
 
-/* STORE CARD SECTION */
-.store-card-section {
-  background-color: #ede7f6;
+/* ===== ABOUT PAGE STYLES ===== */
+/* Hero Section */
+.about-hero {
+  /* Fallback layers */
+  background-color: #106dab;
+  background-image: 
+    linear-gradient(to bottom, rgba(16, 109, 171, 0.85), rgba(16, 109, 171, 0.92)),
+    url('../assets/images/algoa-bus-depot.jpeg');
+  
+  /* Perfect sizing */
+  background-size: cover;
+  background-position: center 30%; /* Focus on bus/top area */
+  background-repeat: no-repeat;
+  background-attachment: local; /* Better for mobile */
+
+  /* Content centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 65vh; /* Dynamic height */
+  padding: 4rem 2rem;
+  position: relative;
 }
 
-.store-card div {
-  margin-bottom: 20px;
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: rgba(247, 252, 255, 0.8);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  font-weight: 700;
 }
 
-/* BENTO CONTAINER SECTION */
-.bento-container {
-  background-color: #e1f5fe;
-  padding: 40px 20px;
+.about-hero p {
+  max-width: 800px;
+  margin: 10 auto;
+  color: #faf8f8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Mission Section */
+.mission-section {
+  background: #f8f9fa;
+  padding: 4rem 0;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 0 2rem;
 }
 
-/* ADVERTISE SECTION */
-.advertise {
-  background-color: #f8bbd0;
+.mission-content h2 {
+  color: #106dab;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.mission-content p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.mission-image {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.mission-image:hover {
+  transform: translateY(-5px);
+}
+
+.mission-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Stats Section */
+.stats-section {
+  background: #106dab;
+  color: white;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
-.advertise button {
-  margin-top: 20px;
-  padding: 10px 30px;
+.stats-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
 }
 
-/* FOOTER */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  background: rgba(255,255,255,0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-hero {
+    background-position: center 40%;
+    min-height: 50vh;
+    
+    /* Lighter gradient for mobile */
+    background-image: 
+      linear-gradient(to bottom, rgba(16, 109, 171, 0.78), rgba(16, 109, 171, 0.9)),
+      url('../assets/images/about-bg-mobile.jpg');
+  }
+}
+  .section-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-image {
+    order: -1;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== STORE CARD SECTION ===== */
+.store-card-section {
+  background: #ede7f6;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.store-card-section > div {
+  padding: 2rem;
+}
+
+.store-card-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.store-card-section h2 {
+  color: #106dab;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.store-card-section p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.store-card-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.store-card-section li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.store-card-section li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #106dab;
+  border-radius: 50%;
+}
+
+.sec-card-1 {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.sec-card-1:hover {
+  transform: translateY(-5px);
+}
+
+.sec-card-1 h4 {
+  color: #106dab;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.sec-card-1 p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.sec-card-1 button {
+  background: #106dab;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sec-card-1 button:hover {
+  background: #0d5a8a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .store-card-section {
+    grid-template-columns: 1fr;
+    padding: 3rem 1rem;
+  }
+  
+  .store-card-section > div {
+    padding: 1.5rem;
+  }
+  
+  .store-card-section img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* ===== ADVERTISE SECTION ===== */
+.advertise {
+  background-color: #f8bbd0;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.advertise h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.advertise p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.advertise button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.advertise button:hover {
+  background-color: #c2185b;
+}
+
+/* ===== FOOTER ===== */
 footer {
   background-color: #424242;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 2rem;
 }
 
-/* Smartphones (up to 600px) */
-@media screen and (max-width: 600px) {
+footer a {
+  color: #afddff;
+  text-decoration: none;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media screen and (max-width: 1024px) {
   .hero-pic {
-    width: 200px;
-    height: 200px;
+    width: 35%;
   }
-
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  .algoa-bus-heading {
-    font-size: small;
-  }
-
-  #nav-links {
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
-  }
-
+  
   .hero-container {
-    margin: 60px 20px;
+    width: 60%;
   }
+}
 
-  .hero-section h1 {
-    font-size: 28px;
+@media screen and (max-width: 768px) {
+  .navigation-bar {
+    padding: 1rem;
   }
-
-  .hero-section p {
-    font-size: 14px;
+  
+  .hero-section {
+    flex-direction: column;
+    padding: 5rem 1.5rem;
   }
-
-  .view-time,
-  .view-contact {
+  
+  .hero-pic {
+    position: static;
+    width: 80%;
+    margin: 0 auto 2rem;
+    transform: none;
+  }
+  
+  .hero-container {
     width: 100%;
-    margin-top: 10px;
+    text-align: center;
   }
-
-  .card1,
-  .card2,
-  .card3 {
-    padding: 10px;
+  
+  .timetable-container {
+    justify-content: center;
   }
-
-  .store-card {
-    padding: 20px 10px;
-  }
-
-  footer {
-    font-size: 12px;
+  
+  .store-card-section {
+    grid-template-columns: 1fr;
   }
 }
 
-/* Tablets (601px to 1024px) */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-  .hero-pic {
-    width: 200px;
-    height: 200px;
-  }
-
+@media screen and (max-width: 600px) {
   .nav-container {
-    padding: 0 20px;
+    flex-direction: column;
+    gap: 1rem;
   }
-
+  
   #nav-links {
-    gap: 25px;
-  }
-
-  .hero-container {
-    margin: 80px 40px;
-  }
-
-  .hero-section h1 {
-    font-size: 32px;
-  }
-
-  .hero-section p {
-    font-size: 16px;
-  }
-
-  .card1,
-  .card2,
-  .card3 {
-    margin-top: 15px;
-    padding: 15px;
-  }
-
-  .store-card {
-    padding: 30px 15px;
-  }
-}
-
-/* Desktops (1025px and up) */
-@media screen and (min-width: 1025px) {
-  .hero-section h1 {
-    font-size: 36px;
-  }
-
-  .hero-section p {
-    font-size: 18px;
-  }
-
-  .store-card {
-    display: flex;
+    gap: 1rem;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 50px;
+    justify-content: center;
   }
-
-  .store-card > div {
-    flex: 1 1 30%;
-    margin: 20px;
+  
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .timetable-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    padding: 1.5rem;
   }
 }

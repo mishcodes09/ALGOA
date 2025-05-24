@@ -5,15 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algoa Bus - Timetable</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* TIMETABLE SPECIFIC STYLES */
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #106dab;
+        }
+        
+        .timetable-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .route-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .route-header {
+            background: #106dab;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .route-title {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+        
+        .route-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .route-fare {
+            background: white;
+            color: #106dab;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .card-cta {
+            background: #e91e63;
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .card-cta:hover {
+            background: #c2185b;
+            transform: translateY(-2px);
+        }
+        
+        .timetable-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .timetable-table th {
+            background: #f5f5f5;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .timetable-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .timetable-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .route-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .timetable-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .timetable-table th,
+            .timetable-table td {
+                min-width: 120px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <img
-      class="hero-pic"
-      src="assets/hero-pic (1).png"
-      alt=""
-      width="500px"
-      height="500px"
-    />
     <section class="navigation-bar">
       <nav>
         <div class="nav-container">
@@ -32,16 +135,99 @@
             <li><a href="routes.html">Routes & Stops</a></li>
             <li><a href="hire.html">Hire</a></li>
             <li><a href="contacts.html">Contact</a></li>
-        </ul>
+          </ul>
         </div>
       </nav>
     </section>
 
     <main>
         <h1>Bus Timetables</h1>
+        
+        <!-- FILTER SECTION -->
+        <div class="filter-section">
+            <select id="route-filter" class="filter-select">
+                <option value="all">All Routes</option>
+                <!-- POPULATE THESE OPTIONS -->
+                <option value="route1">Route 1: Summerstrand ↔ Central</option>
+                <option value="route2">Route 2: Motherwell ↔ Greenacres</option>
+                <!-- Add more routes as needed -->
+            </select>
+            
+            <select id="day-filter" class="filter-select">
+                <option value="weekday">Weekdays</option>
+                <option value="saturday">Saturday</option>
+                <option value="sunday">Sunday/Holidays</option>
+            </select>
+        </div>
+        
         <div class="timetable-grid">
-            <!-- Add timetable content -->
+            <!-- ROUTE CARD TEMPLATE - DUPLICATE FOR EACH ROUTE -->
+            <div class="route-card" data-route="route1">
+                <div class="route-header">
+                    <h2 class="route-title">Route 1: Summerstrand ↔ Central</h2>
+                    <div class="route-meta">
+                        <span class="route-fare">Fare: R15.00</span>
+                        <button class="card-cta" onclick="location.href='card-registration.html'">
+                            Get Travel Card
+                        </button>
+                    </div>
+                </div>
+                
+                <table class="timetable-table">
+                    <thead>
+                        <tr>
+                            <th>Stop</th>
+                            <th>Departure</th>
+                            <th>Arrival</th>
+                            <th>Frequency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- POPULATE THESE ROWS WITH YOUR SCHEDULE DATA -->
+                        <tr>
+                            <td>Summerstrand</td>
+                            <td>06:00</td>
+                            <td>06:45</td>
+                            <td>Every 30 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Humewood</td>
+                            <td>06:15</td>
+                            <td>07:00</td>
+                            <td>Every 30 minutes</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- DUPLICATE THE ABOVE route-card DIV FOR EACH ROUTE -->
         </div>
     </main>
+
+    <script>
+        // Basic filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const routeFilter = document.getElementById('route-filter');
+            const dayFilter = document.getElementById('day-filter');
+            const routeCards = document.querySelectorAll('.route-card');
+            
+            function applyFilters() {
+                const selectedRoute = routeFilter.value;
+                const selectedDay = dayFilter.value;
+                
+                routeCards.forEach(card => {
+                    const route = card.dataset.route;
+                    const showCard = (selectedRoute === 'all' || selectedRoute === route);
+                    card.style.display = showCard ? 'block' : 'none';
+                    
+                    // Note: Add day-specific filtering logic here when you implement day-specific schedules
+                });
+            }
+            
+            routeFilter.addEventListener('change', applyFilters);
+            dayFilter.addEventListener('change', applyFilters);
+        });
+    </script>
 </body>
 </html>
