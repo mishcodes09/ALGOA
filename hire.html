@@ -1,18 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algoa Bus - Advertising</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .hire-main {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 80px; /* Account for fixed navbar */
+      }
+
+      .hire-main h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #106dab;
+      }
+
+      /* Hero Section */
+      .advertise-hero {
+        background: #f5f9fc;
+        padding: 3rem;
+        border-radius: 10px;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      .advertise-hero h1 {
+        color: #106dab;
+        margin-bottom: 1rem;
+      }
+
+      .advertise-hero p {
+        font-size: 1.1rem;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Advertising Section */
+      .advertise-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .advertise-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+      }
+
+      .advertise-card h2 {
+        color: #106dab;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-info {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #eee;
+      }
+
+      .contact-info p {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+      }
+
+      .contact-info a {
+        color: #106dab;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      /* Benefits Section */
+      .benefits-list {
+        padding-left: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .benefits-list li {
+        margin-bottom: 0.8rem;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
     <!-- Navigation Bar -->
     <section class="navigation-bar">
       <nav>
         <div class="nav-container">
           <div class="logo-algoa">
-            <img src="assets/algoa-logo.png" alt="Algoa Bus Logo" class="logo">
+            <img
+              src="assets/algoa-logo.png"
+              alt="Algoa Bus Logo"
+              class="logo"
+            />
             <h3 id="algoa-bus-heading">ALGOA BUS</h3>
           </div>
           <ul id="nav-links">
@@ -28,50 +120,84 @@
     </section>
 
     <main class="hire-main">
-        <!-- Hero Section -->
-        <section class="advertise-hero">
-            <h1>Advertise With Algoa Bus</h1>
-            <p>Want to advertise on our buses? Our mobile advertising solutions give your brand maximum exposure across Nelson Mandela Bay. Partner with us to reach thousands of potential customers every day.</p>
-        </section>
-        
-        <!-- Advertising Partners Section -->
-        <section class="advertise-section">
-            <div class="advertise-card">
-                <h2>Multimedia Advertising</h2>
-                <p>To ensure that your company gets advertised correctly using our contracted advertisers, please contact Multimedia Advertising for professional bus advertising solutions.</p>
-                
-                <div class="contact-info">
-                    <p><strong>Phone:</strong> <a href="tel:0795039016">079 503 9016</a></p>
-                </div>
-            </div>
-            
-            <div class="advertise-card">
-                <h2>Adreach Advertising</h2>
-                <p>Our partnership with Adreach Advertising provides comprehensive advertising services to help your business stand out on our bus fleet.</p>
-                
-                <div class="contact-info">
-                    <p><strong>Phone:</strong> <a href="tel:0413634147">041 363 4147</a></p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Benefits Section -->
-        <section class="advertise-card">
-            <h2>Why Advertise on Our Buses?</h2>
-            <ul class="benefits-list">
-                <li><strong>High Visibility:</strong> Our buses travel throughout Nelson Mandela Bay, ensuring your message is seen by thousands daily</li>
-                <li><strong>Targeted Reach:</strong> Choose specific routes to reach your ideal customer demographics</li>
-                <li><strong>Cost Effective:</strong> Bus advertising offers excellent value compared to other media</li>
-                <li><strong>24/7 Exposure:</strong> Your ad works day and night, parked or in motion</li>
-                <li><strong>Trusted Environment:</strong> Association with a respected public transport provider enhances your brand credibility</li>
-            </ul>
-        </section>
+      <!-- Hero Section -->
+      <section class="advertise-hero">
+        <h1>Advertise With Algoa Bus</h1>
+        <p>
+          Want to advertise on our buses? Our mobile advertising solutions give
+          your brand maximum exposure across Nelson Mandela Bay. Partner with us
+          to reach thousands of potential customers every day.
+        </p>
+      </section>
+
+      <!-- Advertising Partners Section -->
+      <section class="advertise-section">
+        <div class="advertise-card">
+          <h2>Multimedia Advertising</h2>
+          <p>
+            To ensure that your company gets advertised correctly using our
+            contracted advertisers, please contact Multimedia Advertising for
+            professional bus advertising solutions.
+          </p>
+
+          <div class="contact-info">
+            <p>
+              <strong>Phone:</strong> <a href="tel:0795039016">079 503 9016</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="advertise-card">
+          <h2>Adreach Advertising</h2>
+          <p>
+            Our partnership with Adreach Advertising provides comprehensive
+            advertising services to help your business stand out on our bus
+            fleet.
+          </p>
+
+          <div class="contact-info">
+            <p>
+              <strong>Phone:</strong> <a href="tel:0413634147">041 363 4147</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="advertise-card">
+        <h2>Why Advertise on Our Buses?</h2>
+        <ul class="benefits-list">
+          <li>
+            <strong>High Visibility:</strong> Our buses travel throughout Nelson
+            Mandela Bay, ensuring your message is seen by thousands daily
+          </li>
+          <li>
+            <strong>Targeted Reach:</strong> Choose specific routes to reach
+            your ideal customer demographics
+          </li>
+          <li>
+            <strong>Cost Effective:</strong> Bus advertising offers excellent
+            value compared to other media
+          </li>
+          <li>
+            <strong>24/7 Exposure:</strong> Your ad works day and night, parked
+            or in motion
+          </li>
+          <li>
+            <strong>Trusted Environment:</strong> Association with a respected
+            public transport provider enhances your brand credibility
+          </li>
+        </ul>
+      </section>
     </main>
-    
+
     <footer>
-        <p>2025: Algoa Bus Company. All Rights Reserved. Web Design by Melmi Studios.</p>
-        <p><a href="email_company">mihle:info@algobus.co.za</a></p>
-        <p><a href="email_studio">lemi:lemimanqoyio@melmistudios.co.za</a></p>
+      <p>
+        2025: Algoa Bus Company. All Rights Reserved. Web Design by Melmi
+        Studios.
+      </p>
+      <p><a href="email_company">mihle:info@algobus.co.za</a></p>
+      <p><a href="email_studio">lemi:lemimanqoyio@melmistudios.co.za</a></p>
     </footer>
-</body>
+  </body>
 </html>

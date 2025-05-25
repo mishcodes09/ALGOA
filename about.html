@@ -5,6 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Algoa Bus Company</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .about-hero {
+        /* Fallback layers */
+        background-color: #106dab;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(16, 109, 171, 0.85),
+            rgba(16, 109, 171, 0.92)
+          ),
+          url("../assets/images/algoa-bus-depot.jpeg");
+
+        /* Perfect sizing */
+        background-size: cover;
+        background-position: center 30%; /* Focus on bus/top area */
+        background-repeat: no-repeat;
+        background-attachment: local; /* Better for mobile */
+
+        /* Content centering */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 65vh; /* Dynamic height */
+        padding: 4rem 2rem;
+        position: relative;
+      }
+
+      .about-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: rgba(247, 252, 255, 0.8);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        font-weight: 700;
+      }
+
+      .about-hero p {
+        max-width: 800px;
+        margin: 10 auto;
+        color: #faf8f8;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      /* Mission Section */
+      .mission-section {
+        background: #f8f9fa;
+        padding: 4rem 0;
+      }
+
+      .section-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      .mission-content h2 {
+        color: #106dab;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+
+      .mission-content p {
+        color: #333;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .mission-image {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .mission-image:hover {
+        transform: translateY(-5px);
+      }
+
+      .mission-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Stats Section */
+      .stats-section {
+        background: #106dab;
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .stats-section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 600;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .stat-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .stat-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+      }
+
+      .stat-item h3 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+      }
+
+      .stat-item p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation Bar -->

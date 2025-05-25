@@ -1,111 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algoa Bus - Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <section class="navigation-bar">
-    <nav>
-      <div class="nav-container">
-        <div class="logo-algoa">
-          <img src="assets/algoa-logo.png" alt="Algoa Bus Logo" class="logo">
-          <h3 id="algoa-bus-heading">ALGOA BUS</h3>
-        </div>
-        <ul id="nav-links">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .contact-main {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 80px; /* Account for fixed navbar */
+      }
+
+      .contact-main h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #106dab;
+      }
+
+      .contact-hero {
+        background: #f5f9fc;
+        padding: 2rem;
+        border-radius: 10px;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      .contact-hero h2 {
+        color: #106dab;
+        margin-bottom: 1rem;
+      }
+
+      .contact-sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .contact-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+      }
+
+      .contact-card h3 {
+        color: #106dab;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid #106dab;
+        padding-bottom: 0.5rem;
+      }
+
+      .contact-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+
+      .contact-table th {
+        background: #f5f5f5;
+        padding: 0.75rem;
+        text-align: left;
+      }
+
+      .contact-table td {
+        padding: 0.75rem;
+        border-bottom: 1px solid #eee;
+      }
+
+      .contact-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .contact-info {
+        margin-top: 1.5rem;
+      }
+
+      .contact-info p {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+      }
+
+      .contact-info a {
+        color: #106dab;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      .depot-hours {
+        margin-top: 2rem;
+      }
+
+      .depot-hours h4 {
+        color: #106dab;
+        margin-bottom: 1rem;
+      }
+
+      .depot-hours ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .depot-hours li {
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .depot-hours li::before {
+        content: "•";
+        color: #106dab;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="navigation-bar">
+      <nav>
+        <div class="nav-container">
+          <div class="logo-algoa">
+            <img
+              src="assets/algoa-logo.png"
+              alt="Algoa Bus Logo"
+              class="logo"
+            />
+            <h3 id="algoa-bus-heading">ALGOA BUS</h3>
+          </div>
+          <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="timetable.html">Timetable</a></li>
             <li><a href="routes.html">Routes & Stops</a></li>
             <li><a href="hire.html">Hire</a></li>
             <li><a href="contacts.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </section>
-
-  <main class="contact-main">
-    <h1>Contact Support</h1>
-    
-    <section class="contact-hero">
-      <h2>Get in touch</h2>
-      <p>We're here to help with any questions or concerns you may have about our services.</p>
-    </section>
-    
-    <section class="contact-sections">
-      <div class="contact-card">
-        <h3>Know your Unit Manager</h3>
-        <table class="contact-table">
-          <thead>
-            <tr>
-              <th>Buses starting with</th>
-              <th>Unit Manager</th>
-              <th>Contacts</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>M</td>
-              <td>Xoliswa Mhlana</td>
-              <td>041 404-1326</td>
-            </tr>
-            <tr>
-              <td>P</td>
-              <td>Nomajwara Qoma</td>
-              <td>041 404-1286<br>082 885 8107</td>
-            </tr>
-            <tr>
-              <td>B</td>
-              <td>Chris Melane</td>
-              <td>041 404-1273<br>082 904 8377</td>
-            </tr>
-            <tr>
-              <td>K</td>
-              <td>Terrence Mnyila</td>
-              <td>041 404-1271<br>082 885 8106</td>
-            </tr>
-            <tr>
-              <td>U</td>
-              <td>Ntsikelelo Mate</td>
-              <td>041 404-1227<br>082 885 8105</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
-      <div class="contact-card">
-        <h3>General Contacts</h3>
-        <div class="contact-info">
-          <p><strong>Complaints:</strong> <a href="tel:0801421444">080 1421 444</a></p>
-          <p><strong>Enquiries:</strong> <a href="tel:0801421444">080 1421 444</a></p>
-        </div>
-        
-        <div class="contact-info a">
-          <h3>Special Hire</h3>
-          <p><strong>Perl Depot:</strong> <a href="tel:0414041313">041 404 1313</a></p>
-          <p><strong>Bay Depot:</strong> <a href="tel:0414041287">041 404 1287</a></p>
-          <p><strong>Uitenhage Depot:</strong> <a href="tel:0419924419">041 992 4419</a></p>
-          <p><strong>Motherwell Depot:</strong> <a href="tel:0414041246">041 404 1246</a></p>
-        </div>
-        
-        <div class="depot-hours">
-          <h4>Special Hire Hours</h4>
-          <ul>
-            <li>Bay: 08:00am - 15:00pm</li>
-            <li>Perl: 08:00am - 15:00pm</li>
-            <li>Uitenhage: 08:00am - 15:00pm</li>
-            <li>Motherwell: 09:30am - 14:30pm</li>
           </ul>
         </div>
-      </div>
+      </nav>
     </section>
-  </main>
-  
-  <footer>
-    <p>2025: Algoa Bus Company. All Rights Reserved. Web Design by Melmi Studios.</p>
-    <p><a href="mailto:info@algobus.co.za">info@algoabus.co.za</a></p>
-  </footer>
-</body>
+
+    <main class="contact-main">
+      <h1>Contact Support</h1>
+
+      <section class="contact-hero">
+        <h2>Get in touch</h2>
+        <p>
+          We're here to help with any questions or concerns you may have about
+          our services.
+        </p>
+      </section>
+
+      <section class="contact-sections">
+        <div class="contact-card">
+          <h3>Know your Unit Manager</h3>
+          <table class="contact-table">
+            <thead>
+              <tr>
+                <th>Buses starting with</th>
+                <th>Unit Manager</th>
+                <th>Contacts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>M</td>
+                <td>Xoliswa Mhlana</td>
+                <td>041 404-1326</td>
+              </tr>
+              <tr>
+                <td>P</td>
+                <td>Nomajwara Qoma</td>
+                <td>041 404-1286<br />082 885 8107</td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td>Chris Melane</td>
+                <td>041 404-1273<br />082 904 8377</td>
+              </tr>
+              <tr>
+                <td>K</td>
+                <td>Terrence Mnyila</td>
+                <td>041 404-1271<br />082 885 8106</td>
+              </tr>
+              <tr>
+                <td>U</td>
+                <td>Ntsikelelo Mate</td>
+                <td>041 404-1227<br />082 885 8105</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="contact-card">
+          <h3>General Contacts</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Complaints:</strong>
+              <a href="tel:0801421444">080 1421 444</a>
+            </p>
+            <p>
+              <strong>Enquiries:</strong>
+              <a href="tel:0801421444">080 1421 444</a>
+            </p>
+          </div>
+
+          <div class="contact-info a">
+            <h3>Special Hire</h3>
+            <p>
+              <strong>Perl Depot:</strong>
+              <a href="tel:0414041313">041 404 1313</a>
+            </p>
+            <p>
+              <strong>Bay Depot:</strong>
+              <a href="tel:0414041287">041 404 1287</a>
+            </p>
+            <p>
+              <strong>Uitenhage Depot:</strong>
+              <a href="tel:0419924419">041 992 4419</a>
+            </p>
+            <p>
+              <strong>Motherwell Depot:</strong>
+              <a href="tel:0414041246">041 404 1246</a>
+            </p>
+          </div>
+
+          <div class="depot-hours">
+            <h4>Special Hire Hours</h4>
+            <ul>
+              <li>Bay: 08:00am - 15:00pm</li>
+              <li>Perl: 08:00am - 15:00pm</li>
+              <li>Uitenhage: 08:00am - 15:00pm</li>
+              <li>Motherwell: 09:30am - 14:30pm</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        2025: Algoa Bus Company. All Rights Reserved. Web Design by Melmi
+        Studios.
+      </p>
+      <p><a href="mailto:info@algobus.co.za">info@algoabus.co.za</a></p>
+    </footer>
+  </body>
 </html>
