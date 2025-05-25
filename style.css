@@ -212,7 +212,7 @@ body {
 }
 
 .image {
-  width: 300px;
+  width: 450px;
   height: auto;
   border-radius: 10px;
 }
@@ -289,137 +289,186 @@ body {
   transform: scale(0.9, 0.9);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    padding: 60px 30px;
-    margin-top: 60px;
-  }
-
-  .hero-pic {
-    width: 80%;
-    margin: 40px 0 0 0;
-    order: 2;
-  }
-
-  .hero-container {
-    order: 1;
-  }
-}
-.hero-section h1 {
-  font-size: 2.25rem;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-}
-
-.hero-section h1 span {
-  color: #106dab;
-}
-
-.hero-section p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #555;
-}
-
-.timetable-container {
+.features {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  height: auto;
 }
 
-.btn-timetable,
-.btn-contact {
-  padding: 0.75rem 1.5rem;
-  border-radius: 2rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.btn-timetable {
-  background-color: #afddff;
-  border: 1px solid #afddff;
-  color: #106dab;
-}
-
-.btn-timetable:hover {
-  background-color: white;
-  border-color: #106dab;
-}
-
-.btn-contact {
-  background-color: #106dab;
-  border: 1px solid #106dab;
-  color: white;
-}
-
-.btn-contact:hover {
-  background-color: white;
-  color: #106dab;
-}
-
-/* ===== CARDS SECTION ===== */
-.content-section-1 {
-  padding: 4rem 3rem;
-  background-color: white;
-}
-
-.content-h2 {
-  font-size: 2.25rem;
+.feature {
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  flex: 1 1 300px;
+  box-sizing: border-box;
   text-align: center;
+}
+
+.feature img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
   margin-bottom: 1rem;
 }
 
-.content-p {
-  text-align: center;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto 3rem;
+.feature button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.card-section {
+.feature button:hover {
+  background-color: #004d99;
+}
+
+.hire-section {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap;
-  padding: 40px 20px;
+  padding: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: nowrap; /* helps on smaller screens */
 }
 
-.card {
-  flex: 1 1 300px;
-  max-width: 350px;
+.hire-section .image {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
 }
 
-.card .icon {
-  margin-bottom: 1rem;
+.hire-section .text {
+  max-width: 600px;
+  font-size: 1.1rem;
 }
 
-.card-h4 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+.hire-section .text ul {
+  padding-left: 20px;
+  list-style: disc;
 }
 
-.card-p {
-  color: #333;
-  margin-bottom: 1.5rem;
+.hire-section .text li {
+  margin-bottom: 10px;
 }
 
-.card-btn {
+.grid {
+  display: flex;
+  justify-content: center; /* center the inner .grid-section */
+  padding: 2rem;
+}
+
+.grid-section {
+  display: grid;
+  width: 70%; /* not full-width */
+  max-width: 1200px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px); /* consistent row height */
+  gap: 2rem;
+}
+
+/* Box Styling */
+.about-box {
+  padding: 0; /* remove padding so image can fill box if needed */
+  border-radius: 10px;
+  overflow: hidden; /* clip image corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Make all images fill the box cleanly */
+.about-box img {
   width: 100%;
-  padding: 0.75rem;
-  border-radius: 2rem;
-  border: 1px solid #106dab;
-  background-color: #106dab;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
+  height: 100%;
+  object-fit: cover;
 }
 
-.card-btn:hover {
-  background-color: white;
-  color: #007bff;
+/* Ensure text boxes still look good */
+.about-box h4,
+.about-box p,
+.about-box button {
+  padding: 0.5rem 1rem;
+}
+
+/* Specific positioning */
+.box1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.box2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.box3 {
+  background: linear-gradient(75deg, #0a7bbf 0%, #afddff 100%);
+  color: white;
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.box4 {
+  background: linear-gradient(45deg, #0a7bbf 0%, #afddff 100%);
+  color: white;
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.box5 {
+  background: #acd4ec;
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.box6 {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.advertise {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  margin: 0 auto;
+  flex-wrap: nowrap; /* responsive fallback */
+}
+
+.advertise .image {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.advertise .text {
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.advertise .text ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.advertise .text li {
+  margin-bottom: 10px;
 }
 
 /* ===== ABOUT PAGE STYLES ===== */
@@ -970,7 +1019,6 @@ body {
 
 /* ===== ADVERTISE SECTION ===== */
 .advertise {
-  background-color: #f8bbd0;
   text-align: center;
   padding: 4rem 2rem;
 }

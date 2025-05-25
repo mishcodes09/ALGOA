@@ -5,6 +5,420 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algoa Bus Company</title>
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      
+/* Hero Section */
+.hero-pic {
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  position: absolute;
+  right: 0;
+}
+
+.navigation-bar {
+  padding: 10px 50px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo-algoa {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+#algoa-bus-heading {
+  font-size: 30px;
+  color: #333;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+#nav-links a:hover {
+  color: #007bff;
+}
+
+#nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  z-index: 10;
+}
+
+#nav-links li {
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#nav-links li:hover {
+  color: #007bff;
+}
+
+/* HERO SECTION */
+.hero-section {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 170px;
+}
+
+.hero-container {
+  position: relative;
+  margin: 100px 60px;
+  max-width: 50%;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  padding-bottom: 30px;
+}
+
+.hero-section p {
+  padding-bottom: 30px;
+}
+
+.hero-section button {
+  margin-right: 10px;
+  padding: 10px 20px;
+}
+
+.btn-timetable {
+  background-color: #afddff;
+  border: #afddff solid;
+  border-radius: 30px;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-timetable:hover {
+  background-color: white;
+  color: #106dab;
+  border: #afddff solid 1px;
+}
+
+.btn-contact {
+  background-color: #106dab;
+  border: #106dab solid;
+  border-radius: 30px;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-contact:hover {
+  background-color: white;
+  color: #106dab;
+  border: #106dab solid 1px;
+}
+
+/* Content Section 1 (Cards) */
+.content-section-1 {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.container-2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.content-h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  margin-bottom: 1rem;
+  width: 50px;
+}
+
+.card-h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-btn {
+  background-color: #00467f;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background-color: #00345a;
+}
+
+/* Section 2 - Image and Bullet Text */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.image {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text {
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.text ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.text li {
+  margin-bottom: 10px;
+}
+
+/* Travel Section */
+
+.travel-section {
+  height: 200vh;
+  background-color: #fff;
+  padding-top: 50px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  height: auto;
+}
+
+.feature {
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  flex: 1 1 300px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.feature img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.feature button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feature button:hover {
+  background-color: #004d99;
+}
+
+.hire-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: nowrap; /* helps on smaller screens */
+}
+
+.hire-section .image {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hire-section .text {
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.hire-section .text ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.hire-section .text li {
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: flex;
+  justify-content: center; /* center the inner .grid-section */
+  padding: 2rem;
+}
+
+.grid-section {
+  display: grid;
+  width: 70%; /* not full-width */
+  max-width: 1200px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px); /* consistent row height */
+  gap: 1rem;
+}
+
+/* Box Styling */
+.about-box {
+  padding: 0; /* remove padding so image can fill box if needed */
+  border-radius: 10px;
+  overflow: hidden; /* clip image corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Make all images fill the box cleanly */
+.about-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ensure text boxes still look good */
+.about-box h4,
+.about-box p,
+.about-box button {
+  padding: 0.5rem 1rem;
+}
+
+/* Specific positioning */
+.box1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.box2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.box3 {
+  background: linear-gradient(75deg, #0a7bbf 0%, #afddff 100%);
+  color: white;
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.box4 {
+  background: linear-gradient(45deg, #0a7bbf 0%, #afddff 100%);
+  color: white;
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.box5 {
+  background: #acd4ec;
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.box6 {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.advertise {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  margin: 0 auto;
+  flex-wrap: nowrap; /* responsive fallback */
+}
+
+.advertise .image {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.advertise .text {
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.advertise .text ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.advertise .text li {
+  margin-bottom: 10px;
+}
+</style>
   </head>
   <body>
     <!-- Hero Image -->
@@ -146,6 +560,112 @@
         Port Elizabeth.
       </p>
     </div>
+
+    <section class="features">
+      <div class="feature">
+        <img src="assets/map1.jpeg" alt="Route Planning" />
+        <h3>Easy Route Planning</h3>
+        <p>From Summerstrand to Motherwell, plan your journey in just a few clicks.</p>
+        <button>Plan Now</button>
+      </div>
+      <div class="feature">
+        <img src="assets/map2.jpeg" alt="Explore Routes" />
+        <h3>Explore our Routes</h3>
+        <p>View a full map of Algoa Bus routes across Nelson Mandela Bay.</p>
+        <button>View Map</button>
+      </div>
+    </section>
+    
+
+    <section class="hire-section">
+      <div class="text">
+        <h2 class="content-h2">Affordable bus hire<br />for any occasion</h2>
+        <p class="content-p">
+          Rent a bus from as little as R15 a person. Contact our sales team today!
+        </p>
+        <br />
+        <ul>
+          <li>Ideal for school trips, weddings, and corporate events</li>
+          <li>Affordable rates and modern buses</li>
+          <li>Experienced and friendly drivers</li>
+          <li>Safe, reliable, and flexible travel options</li>
+        </ul>
+      </div>
+      <img src="assets/hire-bus.png" alt="Hire a Bus" class="image" />
+    </section>
+    
+    
+
+    <!--bento about grid -->
+    <div class="travel-section">
+      <div class="container-2">
+        <p class="content-p">About Us</p>
+        <h2 class="content-h2">Driven by Purpose. Powered by People.</h2>
+      </div>
+
+    <section class="grid">
+      <div class="grid-section">
+        <div class="about-box small box1">
+          <img src="assets/bus.jpeg" alt="">
+        </div>
+      
+        <!-- Top-middle-left small box -->
+        <div class="about-box small box2">
+          <img src="assets/apk-algoa.png" alt="alogoa bus logo" width="100px" height="100px">
+        </div>
+      
+        <!-- Big left box -->
+        <div class="about-box big box3">
+          <h4>Moving Communities Forward</h4>
+          <p>We’ve been connecting the people of Nelson 
+            Mandela Bay for decades—helping them get to work, 
+            school, and home again with ease.</p>
+          <button>Learn More About Us</button>
+        </div>
+      
+        <!-- Big right box -->
+        <div class="about-box big box4">
+          <h4>Driven by Excellence, Built on Trust</h4>
+          <p>We’re committed to providing safe, reliable, and
+            affordable transport—while empowering our people
+            and growing with our city.</p>
+          <button>Read our Mission</button>
+        </div>
+      
+        <!-- Bottom-right small box -->
+        <div class="about-box small box5">
+          <h4>Call Us</h4>
+          <p>Supporting a cleaner future...</p>
+          <button>Our Green Vision</button>
+        </div>
+      
+        <!-- Bottom-far-right small box -->
+        <div class="about-box small box6">
+          <img src="assets/bus2.jpeg" alt="algoa bus 2" width="100px" height="100px">
+        </div>
+      </div>
+      
+    </section>
+    
+    
+  
+    <section class="advertise">
+      <img src="assets/hire-bus.png" alt="Advertise on Bus" class="image" />
+      <div class="text">
+        <h2 class="content-h2">Want to advertise on our buses?</h2>
+        <p class="content-p">
+          To ensure your company gets advertised correctly, please contact Multimedia Advertising or Algoa Advertising.
+        </p>
+        <br />
+        <ul>
+          <li>High visibility on city routes</li>
+          <li>Affordable long-term exposure</li>
+          <li>Target thousands of commuters daily</li>
+          <li>Custom ad placements available</li>
+        </ul>
+      </div>
+    </section>
+    
   
   <footer>
     <p>2025: Algoa Bus Company. All Rights Reserved. Web Design by Melmi Studios.</p>
