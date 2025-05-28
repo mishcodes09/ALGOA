@@ -2,49 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About Algoa Bus Company</title>
     <link rel="stylesheet" href="style.css" />
     <style>
       .about-hero {
-        /* Fallback layers */
-        background-color: #106dab;
-        background-image: linear-gradient(
-            to bottom,
-            rgba(16, 109, 171, 0.85),
-            rgba(16, 109, 171, 0.92)
-          ),
-          url("../assets/images/algoa-bus-depot.jpeg");
-
-        /* Perfect sizing */
-        background-size: cover;
-        background-position: center 30%; /* Focus on bus/top area */
-        background-repeat: no-repeat;
-        background-attachment: local; /* Better for mobile */
-
-        /* Content centering */
         display: flex;
-        flex-direction: column;
+        flex-direction: row; /* horizontal layout */
+        align-items: center;
         justify-content: center;
-        min-height: 65vh; /* Dynamic height */
+        gap: 3rem;
         padding: 4rem 2rem;
-        position: relative;
+        min-height: 65vh;
+        background-size: cover;
+        background-position: center 30%;
+        background-repeat: no-repeat;
+        background-attachment: local;
+      }
+
+      .about-hero .text-content {
+        max-width: 600px;
       }
 
       .about-hero h1 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
-        color: rgba(247, 252, 255, 0.8);
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        color: black;
         font-weight: 700;
       }
 
       .about-hero p {
-        max-width: 800px;
-        margin: 10 auto;
-        color: #faf8f8;
         font-size: 1.1rem;
         line-height: 1.6;
+      }
+
+      .about-pic {
+        width: 400px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
 
       /* Mission Section */
@@ -57,23 +53,10 @@
         max-width: 1200px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* image left, text right */
         gap: 3rem;
         align-items: center;
         padding: 0 2rem;
-      }
-
-      .mission-content h2 {
-        color: #106dab;
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-        font-weight: 600;
-      }
-
-      .mission-content p {
-        color: #333;
-        line-height: 1.6;
-        margin-bottom: 1rem;
       }
 
       .mission-image {
@@ -91,6 +74,20 @@
         width: 100%;
         height: auto;
         display: block;
+      }
+
+      .mission-content h2 {
+        color: #106dab;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+
+      .mission-content p {
+        color: #333;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
       }
 
       /* Stats Section */
@@ -137,6 +134,148 @@
         font-size: 1.1rem;
         opacity: 0.9;
       }
+
+      /* Why Choose Algoa Section */
+      .why-choose-section {
+        padding: 4rem 2rem;
+        background: #f9f9f9;
+        max-width: 1200px;
+        margin: 0 auto 4rem auto;
+      }
+
+      .why-choose-section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 0.3rem;
+        color: #106dab;
+        font-weight: 700;
+      }
+
+      .why-choose-section p.subtitle {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+        color: #555;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 2rem 1.5rem;
+        width: 280px;
+        box-shadow: 0 4px 15px rgb(16 109 171 / 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgb(16 109 171 / 0.35);
+      }
+
+      .card-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+        filter: invert(34%) sepia(66%) saturate(3601%) hue-rotate(189deg)
+          brightness(95%) contrast(88%);
+      }
+
+      .card h4 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+        color: #00467f;
+        font-weight: 600;
+      }
+
+      .card p {
+        font-size: 1rem;
+        color: #444;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+
+      .card button {
+        background-color: #106dab;
+        color: white;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+
+      .card button:hover {
+        background-color: #00467f;
+      }
+
+      .testimonials-section {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #106dab;
+}
+
+.testimonial-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 300px;
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial-card h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #00467f;
+}
+
+
+      /* Responsive tweaks */
+      @media (max-width: 768px) {
+        .about-hero {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .mission-section .section-container {
+          grid-template-columns: 1fr;
+          padding: 0 1rem;
+        }
+
+        .cards-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
     </style>
   </head>
   <body>
@@ -165,38 +304,41 @@
     </section>
 
     <main>
-      <!-- Hero Section -->
       <section class="about-hero">
-        <h1>Welcome to Algoa Bus Company</h1>
-        <p>
-          Road transportation of people and communities has and always will be
-          an integral part of any country's working and social life. We provide
-          that essential service for the Nelson Mandela Bay area from our four
-          operating depots.
-        </p>
+        <div class="text-content">
+          <h1>Welcome to Algoa Bus Company</h1>
+          <p>
+            Road transportation of people and communities has and always will be
+            an integral part of any country's working and social life. We
+            provide that essential service for the Nelson Mandela Bay area from
+            our four operating depots. The Company plays a significant role in
+            meeting basic needs as well as building the economy of the region.
+          </p>
+        </div>
+        <img class="about-pic" src="assets/egor.jpg" alt="about us bus" />
       </section>
 
       <!-- Mission Section -->
       <section class="mission-section">
         <div class="section-container">
+          <div class="mission-image">
+            <img
+              src="/assets/bus2.jpeg"
+              alt="Algoa Bus team servicing a vehicle"
+            />
+          </div>
           <div class="mission-content">
             <h2>Our Mission</h2>
             <p>
-              Algoa Bus Company strives for excellence in providing a safe,
-              reliable, comfortable and affordable service to the communities
-              and market it serves.
+              At Algoa Bus Company, we are committed to delivering safe,
+              reliable, and affordable transportation services that connect
+              communities and fuel the regional economy.
             </p>
             <p>
-              The Company supports professional and ethical business principles
-              and practices that ensure the growth of the business and the
-              security and well-being of its employees and stakeholders.
+              We uphold professional and ethical business principles, ensuring
+              the growth and sustainability of our company while prioritizing
+              the wellbeing of our employees, customers, and stakeholders.
             </p>
-          </div>
-          <div class="mission-image">
-            <img
-              src="../algoa/assets/bus2.jpeg"
-              alt="Algoa Bus team servicing a vehicle"
-            />
           </div>
         </div>
       </section>
@@ -224,16 +366,77 @@
         </div>
       </section>
 
-      <!-- Additional sections can be added here -->
+      <!-- Why Choose Algoa Section -->
+      <section class="why-choose-section">
+        <h2>Why Choose Algoa Bus?</h2>
+        <p class="subtitle">
+          Decades of Experience, Customer-Centric Approach, Innovative
+          Solutions, and a Community Focus make us your trusted transport
+          partner.
+        </p>
+        <div class="cards-container">
+          <div class="card">
+            <img
+              src="assets/experience.svg"
+              alt="Decades of Experience Icon"
+              class="card-icon"
+            />
+            <h4>Decades of Experience</h4>
+            <p>A proud legacy of service in the Eastern Cape.</p>
+            <button>Learn More</button>
+          </div>
+          <div class="card">
+            <img
+              src="assets/customer-centric.svg"
+              alt="Customer-Centric Icon"
+              class="card-icon"
+            />
+            <h4>Customer-Centric Approach</h4>
+            <p>Committed to making every journey pleasant and convenient.</p>
+            <button>Our Promise</button>
+          </div>
+          <div class="card">
+            <img
+              src="assets/innovation.svg"
+              alt="Innovative Solutions Icon"
+              class="card-icon"
+            />
+            <h4>Innovative Solutions</h4>
+            <p>Introducing smart payment options for safer, faster travel.</p>
+            <button>Discover How</button>
+          
+      </section>
+
+      <section class="testimonials-section">
+        <h2>What Our Passengers Say</h2>
+        <div class="testimonial-cards">
+          <div class="testimonial-card">
+            <p>"Algoa Bus makes my daily commute easy and reliable. Always on time!"</p>
+            <h4>– Nomsa M.</h4>
+          </div>
+          <div class="testimonial-card">
+            <p>"Safe and friendly drivers. I trust Algoa Bus for my family’s transport."</p>
+            <h4>– Thabo K.</h4>
+          </div>
+          <div class="testimonial-card">
+            <p>"The smart card system is so convenient. No more searching for cash."</p>
+            <h4>– Lerato S.</h4>
+          </div>
+        </div>
+      </section>
+      
     </main>
+
     <footer>
       <p>
         2025: Algoa Bus Company. All Rights Reserved. Web Design by Melmi
         Studios.
       </p>
-      <p><a href="mihle:info@algobus.co.za">info@algoabus.co.za</a></p>
+      <p><a href="mailto:info@algoabus.co.za">info@algoabus.co.za</a></p>
       <p>
-        <a href="lemi:lemimanqoyio@melmistudios.co.za">info@algoabus.co.za</a>
+        <a href="mailto:lemimanqoyio@melmistudios.co.za"
+          >lemimanqoyio@melmistudios.co.za</a
+        >
       </p>
     </footer>
   </body>

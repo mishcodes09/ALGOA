@@ -12,6 +12,64 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
+        /* Modern filter container */
+.filter-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Hide native selects but keep them accessible */
+.filter-select {
+  position: relative;
+  width: 250px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 2px solid #106dab;
+  background-color: white;
+  color: #106dab;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Add custom arrow */
+.filter-select::-ms-expand {
+  display: none;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  border-color: #e91e63;
+  outline: none;
+}
+
+/* Custom arrow using background image */
+.filter-select {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%201L5%205L10%201%22%20stroke%3D%22%23106dab%22%20stroke-width%3D%222%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 10px 6px;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 480px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filter-select {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
         
         h1 {
             text-align: center;
