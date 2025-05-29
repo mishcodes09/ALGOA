@@ -80,12 +80,36 @@ body {
   z-index: 10;
   position: absolute;
   right: 0;
+  animation: floatPic 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes floatPic {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .hero-section {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 170px;
+}
+
+.hero-section {
+  opacity: 0;
+  animation: fadeInPage 1.2s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInPage {
+  to {
+    opacity: 1;
+  }
 }
 
 .hero-container {
@@ -101,6 +125,12 @@ body {
   color: #106dab;
 }
 
+.hero-h1 span:hover {
+  color: #007bff;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
 .hero-p {
   padding-bottom: 30px;
 }
@@ -108,6 +138,11 @@ body {
 .hero-section button {
   margin-right: 10px;
   padding: 10px 20px;
+}
+
+.hero-section button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-timetable {
@@ -179,11 +214,24 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes floatIcon {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .icon {
   margin-bottom: 1rem;
   width: 50px;
+  animation: floatIcon 4s ease-in-out infinite;
 }
 
 .card-h4 {
@@ -203,12 +251,18 @@ body {
   padding: 0.6rem 1.2rem;
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .card-btn:hover {
   background-color: white;
   color: #106dab;
   border: #106dab solid 1px;
+  transform: scale(1.03);
+}
+
+.card-btn:active {
+  transform: scale(0.97);
 }
 
 /* Section 2 - Image and Bullet Text */
@@ -226,6 +280,22 @@ body {
   width: 450px;
   height: auto;
   border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.image:hover {
+  transform: translateY(-5px);
+  animation: softPulse 2.5s infinite;
 }
 
 .text {
@@ -240,6 +310,9 @@ body {
 
 .text li {
   margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 /* Travel Section */
@@ -268,6 +341,12 @@ body {
   flex: 1 1 300px;
   box-sizing: border-box;
   text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.feature:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
 
 .feature img {
@@ -276,6 +355,11 @@ body {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.feature img:hover {
+  transform: scale(1.05);
 }
 
 .feature button {
@@ -323,6 +407,13 @@ body {
 
 .hire-section .text li {
   margin-bottom: 10px;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.hire-section .text li:hover {
+  transform: translateX(5px);
+  opacity: 1;
 }
 
 .grid {
@@ -338,6 +429,22 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 200px); /* consistent row height */
   gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hire-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hire-section .image {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .hire-section .text {
+    max-width: 100%;
+  }
 }
 
 /* Box Styling */
@@ -373,6 +480,21 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.about-box:hover .bento-btns {
+  background-color: white;
+  color: #106dab;
+  border: 1px solid #106dab;
+  box-shadow: 0 2px 8px rgba(16, 109, 171, 0.3);
+  transition: all 0.3s ease;
 }
 
 /* Make all images fill the box cleanly */
@@ -380,6 +502,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.about-box:hover img {
+  transform: scale(1.05);
 }
 
 /* Ensure text boxes still look good */
@@ -438,6 +565,8 @@ body {
   background-color: white;
   color: #106dab;
   border: #106dab solid 1px;
+  box-shadow: 0 2px 8px rgba(16, 109, 171, 0.3);
+  transition: all 0.3s ease;
 }
 
 .advertise {
@@ -447,13 +576,28 @@ body {
   gap: 30px;
   padding: 60px;
   margin: 0 auto;
-  flex-wrap: nowrap; /* responsive fallback */
+  max-width: 1000px;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advertise:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .advertise .image {
   width: 450px;
   height: auto;
   border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.advertise:hover .image {
+  transform: scale(1.03);
 }
 
 .advertise .text {

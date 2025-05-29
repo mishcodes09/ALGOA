@@ -14,6 +14,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- AOS Scroll Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Hero Image -->
@@ -23,6 +25,7 @@
       alt="Algoa Bus"
       width="500"
       height="500"
+      data-aos="fade-left"
     />
 
     <!-- Navigation Bar -->
@@ -44,7 +47,7 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-      <div class="hero-container">
+      <div class="hero-container" data-aos="fade-right">
         <h1 class="hero-h1">
           <span>Reliable </span>Public Transport <span>Solutions</span> Across
           Nelson Mandela Bay
@@ -69,7 +72,7 @@
 
     <!-- your travel made simple -->
     <section class="content-section-1">
-      <div class="container-2">
+      <div class="container-2" data-aos="fade-up">
         <h2 class="content-h2">Your travel made simple</h2>
         <p class="content-p">
           Get your Algoa Bus card, load it in seconds, and tap your way across
@@ -78,7 +81,7 @@
       </div>
 
       <div class="card-section">
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
           <img
             class="icon"
             src="assets/icon-card.svg"
@@ -93,7 +96,7 @@
           <button class="card-btn">Reserve a card</button>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
           <img
             class="icon"
             src="assets/card.svg"
@@ -109,7 +112,7 @@
           <button class="card-btn">Load your card</button>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
           <img
             class="icon"
             src="assets/tap-to-pay.svg"
@@ -129,26 +132,39 @@
 
     <!-- Store Card Bullets -->
     <div class="container">
-      <img src="assets/card-circle.png" alt="Description" class="image" />
-      <div class="text">
+      <img
+        src="assets/card-circle.png"
+        alt="Description"
+        class="image"
+        data-aos="fade-right"
+      />
+      <div class="text" data-aos="fade-left">
         <h2 class="content-h2">Stored value smart card</h2>
-        <p class="content-p">
+        <p class="content-p" data-aos="fade-up" data-aos-delay="100">
           Take the pain and risk out of carring cash with our new Algoa Bus
           Stored Vaue Smart Card.
         </p>
         <br />
         <ul>
-          <li>Pre-load up-to R500 to use for traveling</li>
-          <li>Safe, secure & risk free</li>
-          <li>Never worry about carrying cash again</li>
-          <li>The most convenient way to travel</li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            Pre-load up-to R500 to use for traveling
+          </li>
+          <li data-aos="fade-up" data-aos-delay="300">
+            Safe, secure & risk free
+          </li>
+          <li data-aos="fade-up" data-aos-delay="400">
+            Never worry about carrying cash again
+          </li>
+          <li data-aos="fade-up" data-aos-delay="500">
+            The most convenient way to travel
+          </li>
         </ul>
       </div>
     </div>
 
     <!-- Go Where You Need To, Effortlessly -->
     <div class="travel-section">
-      <div class="container-2">
+      <div class="container-2" data-aos="fade-up">
         <h2 class="content-h2">Go Where You Need To, Effortlessly</h2>
         <p class="content-p">
           From Summerstrand to Motherwell, plan your journey in just a few
@@ -157,7 +173,7 @@
       </div>
 
       <section class="features">
-        <div class="feature">
+        <div class="feature" data-aos="zoom-in-up" data-aos-delay="100">
           <img src="assets/map1.jpeg" alt="Route Planning" />
           <h3>Easy Route Planning</h3>
           <p>
@@ -166,7 +182,7 @@
           </p>
           <button>Plan Now</button>
         </div>
-        <div class="feature">
+        <div class="feature" data-aos="zoom-in-up" data-aos-delay="200">
           <img src="assets/map2.jpeg" alt="Explore Routes" />
           <h3>Explore our Routes</h3>
           <p>View a full map of Algoa Bus routes across Nelson Mandela Bay.</p>
@@ -177,37 +193,57 @@
 
     <section class="hire-section">
       <div class="text">
-        <h2 class="content-h2">Affordable bus hire<br />for any occasion</h2>
+        <h2 class="content-h2" data-aos="fade-up" data-aos-duration="1000">
+          Affordable bus hire<br />for any occasion
+        </h2>
         <p class="content-p">
           Rent a bus from as little as R15 a person. Contact our sales team
           today!
         </p>
         <br />
         <ul>
-          <li>Ideal for school trips, weddings, and corporate events</li>
-          <li>Affordable rates and modern buses</li>
-          <li>Experienced and friendly drivers</li>
-          <li>Safe, reliable, and flexible travel options</li>
+          <li data-aos="fade-right" data-aos-delay="100">
+            Ideal for school trips, weddings, and corporate events
+          </li>
+          <li data-aos="fade-right" data-aos-delay="200">
+            Affordable rates and modern buses
+          </li>
+          <li data-aos="fade-right" data-aos-delay="300">
+            Experienced and friendly drivers
+          </li>
+          <li data-aos="fade-right" data-aos-delay="400">
+            Safe, reliable, and flexible travel options
+          </li>
         </ul>
       </div>
-      <img src="assets/hire-bus.png" alt="Hire a Bus" class="image" />
+      <img
+        src="assets/hire-bus.png"
+        alt="Hire a Bus"
+        class="image"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+      />
     </section>
 
     <!--bento about grid -->
     <div class="bento-section">
-      <div class="bento-container">
+      <div class="bento-container" data-aos="fade-up">
         <p class="bento-p">About Us</p>
         <h2 class="bento-h2">Driven by Purpose. Powered by People.</h2>
       </div>
 
       <section class="grid">
         <div class="grid-section">
-          <div class="about-box small box1">
+          <div class="about-box small box1" data-aos="zoom-in">
             <img src="assets/bus.jpeg" alt="" />
           </div>
 
           <!-- Top-middle-left small box -->
-          <div class="about-box small box2">
+          <div
+            class="about-box small box2"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
             <img
               src="assets/apk-algoa.png"
               alt="alogoa bus logo"
@@ -217,7 +253,11 @@
           </div>
 
           <!-- Big left box -->
-          <div class="about-box big box3">
+          <div
+            class="about-box big box3"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
             <h4>Moving Communities Forward</h4>
             <p>
               We’ve been connecting the people of Nelson Mandela Bay for
@@ -228,7 +268,11 @@
           </div>
 
           <!-- Big right box -->
-          <div class="about-box big box4">
+          <div
+            class="about-box big box4"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
             <h4>Driven by Excellence, Built on Trust</h4>
             <p>
               We’re committed to providing safe, reliable, and affordable
@@ -238,14 +282,22 @@
           </div>
 
           <!-- Bottom-right small box -->
-          <div class="about-box small box5">
+          <div
+            class="about-box small box5"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
             <h4>Call Us</h4>
             <p>Supporting a cleaner future...</p>
             <button class="bento-btns">Our Green Vision</button>
           </div>
 
           <!-- Bottom-far-right small box -->
-          <div class="about-box small box6">
+          <div
+            class="about-box small box6"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+          >
             <img
               src="assets/bus2.jpeg"
               alt="algoa bus 2"
@@ -259,18 +311,26 @@
 
     <div class="container">
       <img src="assets/hire-bus.png" alt="Description" class="image" />
-      <div class="text">
+      <div class="text" data-aos="fade-left">
         <h2 class="content-h2">Want to advertise on our buses?</h2>
-        <p class="content-p">
+        <p class="content-p" data-aos="fade-up" data-aos-delay="100">
           To ensure your company gets advertised correctly, please contact
           Multimedia Advertising or Algoa Advertising.
         </p>
         <br />
         <ul>
-          <li>High visibility on city routes</li>
-          <li>Affordable long-term exposure</li>
-          <li>Target thousands of commuters daily</li>
-          <li>Custom ad placements available</li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            High visibility on city routes
+          </li>
+          <li data-aos="fade-up" data-aos-delay="300">
+            Affordable long-term exposure
+          </li>
+          <li data-aos="fade-up" data-aos-delay="400">
+            Target thousands of commuters daily
+          </li>
+          <li data-aos="fade-up" data-aos-delay="500">
+            Custom ad placements available
+          </li>
         </ul>
       </div>
     </div>
@@ -327,5 +387,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
   </body>
 </html>
