@@ -16,6 +16,7 @@ body {
   --m: 4rem;
 }
 
+/* NAVIGATION BAR */
 .navigation-bar {
   padding: 10px 50px;
 }
@@ -65,15 +66,1029 @@ body {
   font-size: 16px;
   cursor: pointer;
   transition: color 0.3s;
+  color: #eee;
 }
 
 #nav-links li:hover {
   color: #007bff;
 }
 
+/* INDEX */
+.hero-pic {
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  position: absolute;
+  right: 0;
+}
+
+.hero-section {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 170px;
+}
+
+.hero-container {
+  position: relative;
+  margin: 100px 60px;
+  max-width: 50%;
+}
+
+.hero-h1 {
+  font-size: 36px;
+  padding-bottom: 10px;
+  text-align: left;
+  color: #106dab;
+}
+
+.hero-p {
+  padding-bottom: 30px;
+}
+
+.hero-section button {
+  margin-right: 10px;
+  padding: 10px 20px;
+}
+
+.btn-timetable {
+  background-color: #afddff;
+  border: #afddff solid;
+  border-radius: 5px;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-timetable:hover {
+  background-color: white;
+  color: #106dab;
+  border: #afddff solid 1px;
+}
+
+.btn-contact {
+  background-color: #106dab;
+  border: #106dab solid;
+  border-radius: 5px;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-contact:hover {
+  background-color: white;
+  color: #106dab;
+  border: #106dab solid 1px;
+}
+
+/* Content Section 1 (Cards) */
+.content-section-1 {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.container-2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.content-h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  margin-bottom: 1rem;
+  width: 50px;
+}
+
+.card-h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-btn {
+  background-color: #106dab;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background-color: white;
+  color: #106dab;
+  border: #106dab solid 1px;
+}
+
+/* Section 2 - Image and Bullet Text */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.image {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text {
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.text ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.text li {
+  margin-bottom: 10px;
+}
+
+/* Travel Section */
+
+.travel-section {
+  height: 130vh;
+  padding-top: 50px;
+  background-color: #fff;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  height: auto;
+}
+
+.feature {
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  flex: 1 1 300px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.feature img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.feature button {
+  background-color: #106dab;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feature button:hover {
+  background-color: white;
+  color: #106dab;
+  border: #106dab solid 1px;
+}
+
+.hire-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: nowrap; /* helps on smaller screens */
+}
+
+.hire-section .image {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hire-section .text {
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.hire-section .text ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.hire-section .text li {
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: flex;
+  justify-content: center; /* center the inner .grid-section */
+  padding: 2rem;
+}
+
+.grid-section {
+  display: grid;
+  width: 70%; /* not full-width */
+  max-width: 1200px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px); /* consistent row height */
+  gap: 1rem;
+}
+
+/* Box Styling */
+
+.bento-section {
+  background-color: #fff;
+}
+
+.bento-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.bento-p {
+  font-size: 1.1rem;
+  color: #555;
+  padding-top: 40px;
+}
+
+.bento-h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-box {
+  padding: 0; /* remove padding so image can fill box if needed */
+  border-radius: 10px;
+  overflow: hidden; /* clip image corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Make all images fill the box cleanly */
+.about-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ensure text boxes still look good */
+.about-box h4,
+.about-box p,
+.about-box button {
+  padding: 0.5rem 1rem;
+}
+
+/* Specific positioning */
+.box1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.box2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.box3 {
+  background: linear-gradient(75deg, #0a7bbf 0%, #afddff 100%);
+  color: white;
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.box4 {
+  background: linear-gradient(45deg, #0a7bbf 0%, #afddff 100%);
+  color: white;
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.box5 {
+  background: #acd4ec;
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.box6 {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.bento-btns {
+  background-color: #106dab;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bento-btns:hover {
+  background-color: white;
+  color: #106dab;
+  border: #106dab solid 1px;
+}
+
+.advertise {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  margin: 0 auto;
+  flex-wrap: nowrap; /* responsive fallback */
+}
+
+.advertise .image {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.advertise .text {
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.advertise .text ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.advertise .text li {
+  margin-bottom: 10px;
+}
+
+/* ABOUT*/
+.about-hero {
+  display: flex;
+  flex-direction: row; /* horizontal layout */
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  min-height: 65vh;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-attachment: local;
+}
+
+.about-hero .text-content {
+  max-width: 600px;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: black;
+  font-weight: 700;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-pic {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.mission-section {
+  background: #f8f9fa;
+  padding: 4rem 0;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* image left, text right */
+  gap: 3rem;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.mission-image {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mission-image:hover {
+  transform: translateY(-5px);
+}
+
+.mission-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mission-content h2 {
+  color: #106dab;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.mission-content p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Stats Section */
+.stats-section {
+  background: #106dab;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.stats-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Why Choose Algoa Section */
+.why-choose-section {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+}
+
+.why-choose-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+  color: #106dab;
+  font-weight: 700;
+}
+
+.why-choose-section p.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  width: 280px;
+  box-shadow: 0 4px 15px rgb(16 109 171 / 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgb(16 109 171 / 0.35);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  filter: invert(34%) sepia(66%) saturate(3601%) hue-rotate(189deg)
+    brightness(95%) contrast(88%);
+}
+
+.card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #00467f;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.card button {
+  background-color: #106dab;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #00467f;
+}
+
+.testimonials-section {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #106dab;
+}
+
+.testimonial-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 300px;
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial-card h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #00467f;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mission-section .section-container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* TIMETABLE*/
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Modern filter container */
+.filter-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Hide native selects but keep them accessible */
+.filter-select {
+  position: relative;
+  width: 250px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 2px solid #106dab;
+  background-color: white;
+  color: #106dab;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Add custom arrow */
+.filter-select::-ms-expand {
+  display: none;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  border-color: #e91e63;
+  outline: none;
+}
+
+/* Custom arrow using background image */
+.filter-select {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%201L5%205L10%201%22%20stroke%3D%22%23106dab%22%20stroke-width%3D%222%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 10px 6px;
+}
+
+.timetable-h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #106dab;
+}
+
+.timetable-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.route-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.route-header {
+  background: #106dab;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.route-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.route-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.route-fare {
+  background: white;
+  color: #106dab;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.card-cta {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.card-cta:hover {
+  background: #c2185b;
+  transform: translateY(-2px);
+}
+
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable-table th {
+  background: #f5f5f5;
+  padding: 1rem;
+  text-align: left;
+}
+
+.timetable-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.timetable-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* HIRE */
+
+.hire-main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px; /* Account for fixed navbar */
+}
+
+.hire-main h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #106dab;
+}
+
+/* Hero Section */
+.advertise-hero {
+  background: #f5f9fc;
+  padding: 3rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.advertise-hero h1 {
+  color: #106dab;
+  margin-bottom: 1rem;
+}
+
+.advertise-hero p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Advertising Section */
+.advertise-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.advertise-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.advertise-card h2 {
+  color: #106dab;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: #106dab;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Benefits Section */
+.benefits-list {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.benefits-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+/* CONTACT */
+
+.contact-main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px; /* Account for fixed navbar */
+}
+
+.contact-main h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #106dab;
+}
+
+.contact-hero {
+  background: #f5f9fc;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact-hero h2 {
+  color: #106dab;
+  margin-bottom: 1rem;
+}
+
+.contact-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.contact-card h3 {
+  color: #106dab;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #106dab;
+  padding-bottom: 0.5rem;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.contact-table th {
+  background: #f5f5f5;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.contact-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-table tr:last-child td {
+  border-bottom: none;
+}
+
+.contact-info {
+  margin-top: 1.5rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: #106dab;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.depot-hours {
+  margin-top: 2rem;
+}
+
+.depot-hours h4 {
+  color: #106dab;
+  margin-bottom: 1rem;
+}
+
+.depot-hours ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.depot-hours li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.depot-hours li::before {
+  content: "•";
+  color: #106dab;
+  position: absolute;
+}
+
+/* FOOTER */
+
 .footer-basic {
   padding: 40px 0;
-  color: #4b4c4d;
+  color: white;
+  background-color: #106dab;
+  height: 100vh;
 }
 
 .footer-basic .container {
@@ -85,14 +1100,14 @@ body {
   font-size: 50px; /* Set h1 size explicitly */
   text-align: left; /* Align to left for column layout */
   margin-bottom: 10px;
-  color: #333; /* Darker color for prominence */
+  color: #eee; /* Darker color for prominence */
 }
 
 .slogan {
   text-align: left;
   font-size: 16px;
   margin-bottom: 20px;
-  color: #666;
+  color: #eee;
 }
 
 .footer-left {
@@ -112,7 +1127,7 @@ body {
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 1px solid #eee;
   margin: 0 10px 0 0; /* Adjust margin for left alignment */
   color: inherit;
   opacity: 0.75;
@@ -121,8 +1136,8 @@ body {
 
 .social-icons > a:hover {
   opacity: 0.95;
-  color: #007bff; /* Example hover color for social icons */
-  border-color: #007bff;
+  color: #fff000; /* Example hover color for social icons */
+  border-color: #fff000;
 }
 
 .footer-right ul {
@@ -147,7 +1162,7 @@ body {
 
 .footer-right ul a:hover {
   opacity: 1;
-  color: #007bff; /* Example hover color for links */
+  color: #fff000; /* Example hover color for links */
 }
 
 .footer-image img {
@@ -164,17 +1179,17 @@ body {
 .footer-basic .copyright {
   margin-top: 0; /* Remove default margin */
   font-size: 13px;
-  color: #424242;
+  color: #eee;
   margin-bottom: 5px; /* Space between copyright and coded-by */
 }
 
 .coded-by {
   font-size: 14px;
-  color: #555;
+  color: #eee;
 }
 
 .coded-by a {
-  color: #007bff; /* Link color for Memli Studios */
+  color: #eee; /* Link color for Memli Studios */
   text-decoration: none;
   font-weight: bold;
 }

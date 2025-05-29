@@ -12,406 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
     />
-
     <link rel="stylesheet" href="style.css" />
-
-    <style>
-      /* Hero Section */
-      .hero-pic {
-        margin: 0;
-        padding: 0;
-        z-index: 10;
-        position: absolute;
-        right: 0;
-      }
-
-      /* HERO SECTION */
-      .hero-section {
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 170px;
-      }
-
-      .hero-container {
-        position: relative;
-        margin: 100px 60px;
-        max-width: 50%;
-      }
-
-      .hero-section h1 {
-        font-size: 36px;
-        padding-bottom: 30px;
-      }
-
-      .hero-section p {
-        padding-bottom: 30px;
-      }
-
-      .hero-section button {
-        margin-right: 10px;
-        padding: 10px 20px;
-      }
-
-      .btn-timetable {
-        background-color: #afddff;
-        border: #afddff solid;
-        border-radius: 5px;
-        transition: all 200ms ease-in-out;
-      }
-
-      .btn-timetable:hover {
-        background-color: white;
-        color: #106dab;
-        border: #afddff solid 1px;
-      }
-
-      .btn-contact {
-        background-color: #106dab;
-        border: #106dab solid;
-        border-radius: 5px;
-        color: white;
-        transition: all 200ms ease-in-out;
-      }
-
-      .btn-contact:hover {
-        background-color: white;
-        color: #106dab;
-        border: #106dab solid 1px;
-      }
-
-      /* Content Section 1 (Cards) */
-      .content-section-1 {
-        padding: 4rem 2rem;
-        background-color: #fff;
-      }
-
-      .container-2 {
-        text-align: center;
-        margin-bottom: 3rem;
-      }
-
-      .content-h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      .content-p {
-        font-size: 1.1rem;
-        color: #555;
-      }
-
-      .card-section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-      }
-
-      .card {
-        background-color: #f0f0f0;
-        border-radius: 10px;
-        padding: 2rem;
-        text-align: center;
-        width: 300px;
-        transition: transform 0.3s;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-      }
-
-      .icon {
-        margin-bottom: 1rem;
-        width: 50px;
-      }
-
-      .card-h4 {
-        font-size: 1.4rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .card-p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .card-btn {
-        background-color: #106dab;
-        color: white;
-        border: none;
-        padding: 0.6rem 1.2rem;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .card-btn:hover {
-        background-color: white;
-        color: #106dab;
-        border: #106dab solid 1px;
-      }
-
-      /* Section 2 - Image and Bullet Text */
-      .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        padding: 60px;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-
-      .image {
-        width: 450px;
-        height: auto;
-        border-radius: 10px;
-      }
-
-      .text {
-        max-width: 600px;
-        font-size: 1.1rem;
-      }
-
-      .text ul {
-        padding-left: 20px;
-        list-style: disc;
-      }
-
-      .text li {
-        margin-bottom: 10px;
-      }
-
-      /* Travel Section */
-
-      .travel-section {
-        height: 130vh;
-        padding-top: 50px;
-        background-color: #fff;
-      }
-
-      .features {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        padding: 2rem;
-        justify-content: center;
-        height: auto;
-      }
-
-      .feature {
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 400px;
-        flex: 1 1 300px;
-        box-sizing: border-box;
-        text-align: center;
-      }
-
-      .feature img {
-        width: 100%;
-        max-height: 180px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-      }
-
-      .feature button {
-        background-color: #106dab;
-        color: white;
-        border: none;
-        padding: 0.6rem 1.2rem;
-        margin-top: 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .feature button:hover {
-        background-color: white;
-        color: #106dab;
-        border: #106dab solid 1px;
-      }
-
-      .hire-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        padding: 60px;
-        max-width: 1000px;
-        margin: 0 auto;
-        flex-wrap: nowrap; /* helps on smaller screens */
-      }
-
-      .hire-section .image {
-        width: 450px;
-        height: auto;
-        border-radius: 10px;
-      }
-
-      .hire-section .text {
-        max-width: 600px;
-        font-size: 1.1rem;
-      }
-
-      .hire-section .text ul {
-        padding-left: 20px;
-        list-style: disc;
-      }
-
-      .hire-section .text li {
-        margin-bottom: 10px;
-      }
-
-      .grid {
-        display: flex;
-        justify-content: center; /* center the inner .grid-section */
-        padding: 2rem;
-      }
-
-      .grid-section {
-        display: grid;
-        width: 70%; /* not full-width */
-        max-width: 1200px;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 200px); /* consistent row height */
-        gap: 1rem;
-      }
-
-      /* Box Styling */
-
-      .bento-section {
-        background-color: #fff;
-      }
-
-      .bento-container {
-        text-align: center;
-        margin-top: 50px;
-      }
-
-      .bento-p {
-        font-size: 1.1rem;
-        color: #555;
-        padding-top: 40px;
-      }
-
-      .bento-h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      .about-box {
-        padding: 0; /* remove padding so image can fill box if needed */
-        border-radius: 10px;
-        overflow: hidden; /* clip image corners */
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        background-color: #f9f9f9;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-
-      /* Make all images fill the box cleanly */
-      .about-box img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      /* Ensure text boxes still look good */
-      .about-box h4,
-      .about-box p,
-      .about-box button {
-        padding: 0.5rem 1rem;
-      }
-
-      /* Specific positioning */
-      .box1 {
-        grid-column: 1;
-        grid-row: 1;
-      }
-
-      .box2 {
-        grid-column: 2;
-        grid-row: 1;
-      }
-
-      .box3 {
-        background: linear-gradient(75deg, #0a7bbf 0%, #afddff 100%);
-        color: white;
-        grid-column: 1 / span 2;
-        grid-row: 2 / span 2;
-      }
-
-      .box4 {
-        background: linear-gradient(45deg, #0a7bbf 0%, #afddff 100%);
-        color: white;
-        grid-column: 3 / span 2;
-        grid-row: 1 / span 2;
-      }
-
-      .box5 {
-        background: #acd4ec;
-        grid-column: 3;
-        grid-row: 3;
-      }
-
-      .box6 {
-        grid-column: 4;
-        grid-row: 3;
-      }
-
-      .bento-btns {
-        background-color: #106dab;
-        color: white;
-        border: none;
-        padding: 0.6rem 1.2rem;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .bento-btns:hover {
-        background-color: white;
-        color: #106dab;
-        border: #106dab solid 1px;
-      }
-
-      .advertise {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        padding: 60px;
-        margin: 0 auto;
-        flex-wrap: nowrap; /* responsive fallback */
-      }
-
-      .advertise .image {
-        width: 450px;
-        height: auto;
-        border-radius: 10px;
-      }
-
-      .advertise .text {
-        max-width: 600px;
-        font-size: 1.1rem;
-      }
-
-      .advertise .text ul {
-        padding-left: 20px;
-        list-style: disc;
-      }
-
-      .advertise .text li {
-        margin-bottom: 10px;
-      }
-    </style>
   </head>
   <body>
     <!-- Hero Image -->
@@ -434,7 +35,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="timetable.html">Timetable</a></li>
-          <li><a href="routes.html">Routes & Stops</a></li>
           <li><a href="hire.html">Hire</a></li>
           <li><a href="contacts.html">Contact</a></li>
         </ul>
@@ -466,7 +66,7 @@
       </div>
     </section>
 
-    <!-- Card Information Section -->
+    <!-- your travel made simple -->
     <section class="content-section-1">
       <div class="container-2">
         <h2 class="content-h2">Your travel made simple</h2>
@@ -545,13 +145,13 @@
       </div>
     </div>
 
-    <!-- Travel Anywhere Section -->
+    <!-- Go Where You Need To, Effortlessly -->
     <div class="travel-section">
       <div class="container-2">
-        <h2 class="content-h2">Your travel made simple</h2>
+        <h2 class="content-h2">Go Where You Need To, Effortlessly</h2>
         <p class="content-p">
-          Get your Algoa Bus card, load it in seconds, and tap your way across
-          Port Elizabeth.
+          From Summerstrand to Motherwell, plan your journey in just a few
+          clicks.
         </p>
       </div>
 
@@ -656,8 +256,8 @@
       </section>
     </div>
 
-    <section class="advertise">
-      <img src="assets/hire-bus.png" alt="Advertise on Bus" class="image" />
+    <div class="container">
+      <img src="assets/hire-bus.png" alt="Description" class="image" />
       <div class="text">
         <h2 class="content-h2">Want to advertise on our buses?</h2>
         <p class="content-p">
@@ -672,7 +272,7 @@
           <li>Custom ad placements available</li>
         </ul>
       </div>
-    </section>
+    </div>
 
     <div class="footer-basic">
       <footer>
@@ -688,7 +288,6 @@
             </div>
 
             <div class="col-md-2"></div>
-            <!-- Spacer column -->
 
             <div class="col-md-5 footer-right">
               <ul class="list-unstyled">
@@ -700,25 +299,29 @@
               </ul>
             </div>
           </div>
+
           <div class="col-md-4 footer-image text-center">
-            <img src="assets/Lowery.jpeg" alt="Bus Image" class="img-fluid" style="max-height: 150px;">
+            <img
+              src="assets/Lowery.jpeg"
+              alt="Bus Image"
+              class="img-fluid"
+              style="max-height: 150px"
+            />
           </div>
         </div>
-      </div>
+
+        <div class="row">
+          <div class="col-md-12 text-center copyright-section">
+            <p class="copyright">Algoa Bus Company © 2025</p>
+            <p class="coded-by">
+              Coded with ❤️ by
+              <a href="https://www.memlistudios.com" target="_blank"
+                >Memli Studios</a
+              >
+            </p>
+          </div>
         </div>
       </footer>
-
-      <div class="row">
-        <div class="col-md-12 text-center copyright-section">
-          <p class="copyright">Algoa Bus Company © 2018</p>
-          <p class="coded-by">
-            Coded with ❤️ by
-            <a href="https://www.memlistudios.com" target="_blank"
-              >Memli Studios</a
-            >
-          </p>
-        </div>
-      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
