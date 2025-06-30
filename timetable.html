@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algoa Bus - Timetable</title>
     <link rel="icon" type="image/png" href="assets/algoa-logo.png" />
     <link
@@ -13,10 +13,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
     />
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
     <section class="navigation-bar">
       <nav>
         <div class="nav-container">
@@ -40,243 +40,276 @@
     </section>
 
     <main>
-        <h1 class="timetable-h1">Bus Timetables</h1>
-        
-        <!-- FILTER SECTION -->
-        <div class="filter-section">
-            <select id="route-filter" class="filter-select">
-                <option value="all">All Routes</option>
-                <!-- POPULATE THESE OPTIONS -->
-                <option value="route1">Route 1: Summerstrand ↔ Central</option>
-                <option value="route2">Route 2: Motherwell ↔ Greenacres</option>
-                <option value="route3">Route 3: KwaDwesi ↔ City</option>
-                <option value="route4">Route 4: City ↔ NMU</option>
-                <option value="route5">Route 5: Booysen Park ↔ City</option>
-                <option value="route6">Route 6: Deal Party ↔ City</option>
-                <option value="route7">Route 7: City ↔ KwaDwesi</option>
-                <option value="route8">Route 8: Central ↔ Summerstrand</option>
-                <option value="route9">Route 9: Greenacres ↔ Rowallan Park</option>
-                <option value="route10">Route 10: Baywest ↔ KwaDwesi</option>
-                <!-- Add more routes as needed -->
-            </select>
-            
-            <select id="day-filter" class="filter-select">
-                <option value="weekday">Weekdays</option>
-                <option value="saturday">Saturday</option>
-                <option value="sunday">Sunday/Holidays</option>
-            </select>
+      <h1 class="timetable-h1" data-aos="fade-down">Bus Timetables</h1>
+
+      <!-- FILTER SECTION -->
+      <div class="filter-section" data-aos="fade-up" data-aos-delay="200">
+        <select id="route-filter" class="filter-select">
+          <option value="all">All Routes</option>
+          <!-- POPULATE THESE OPTIONS -->
+          <option value="route1">Route 1: Summerstrand ↔ Central</option>
+          <option value="route2">Route 2: Motherwell ↔ Greenacres</option>
+          <option value="route3">Route 3: KwaDwesi ↔ City</option>
+          <option value="route4">Route 4: City ↔ NMU</option>
+          <option value="route5">Route 5: Booysen Park ↔ City</option>
+          <option value="route6">Route 6: Deal Party ↔ City</option>
+          <option value="route7">Route 7: City ↔ KwaDwesi</option>
+          <option value="route8">Route 8: Central ↔ Summerstrand</option>
+          <option value="route9">Route 9: Greenacres ↔ Rowallan Park</option>
+          <option value="route10">Route 10: Baywest ↔ KwaDwesi</option>
+          <!-- Add more routes as needed -->
+        </select>
+
+        <select id="day-filter" class="filter-select">
+          <option value="weekday">Weekdays</option>
+          <option value="saturday">Saturday</option>
+          <option value="sunday">Sunday/Holidays</option>
+        </select>
+      </div>
+
+      <div class="timetable-grid">
+        <!-- DUPLICATE THE BELOW route-card DIV FOR EACH ROUTE -->
+
+        <div class="route-card" data-route="route1" data-aos="fade-up">
+          <div class="route-header">
+            <h2 class="route-title">Route 1: Summerstrand ↔ Central</h2>
+            <div class="route-meta">
+              <span class="route-fare">Fare: R25.00</span>
+              <button
+                class="card-cta"
+                onclick="location.href='card-registration.html'"
+              >
+                Get Travel Card
+              </button>
+            </div>
+          </div>
+
+          <table class="timetable-table">
+            <thead>
+              <tr>
+                <th>Stops</th>
+                <th>Arrival 1</th>
+                <th>Arrival 2</th>
+                <th>Frequency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Summerstrand</td>
+                <td>06:00</td>
+                <td>06:45</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <tr>
+                <td>Humewood</td>
+                <td>06:15</td>
+                <td>07:00</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
         </div>
-        
-        <div class="timetable-grid">
-            <!-- DUPLICATE THE BELOW route-card DIV FOR EACH ROUTE -->
-        
-            <div class="route-card" data-route="route1">
-                <div class="route-header">
-                    <h2 class="route-title">Route 1: Summerstrand ↔ Central</h2>
-                    <div class="route-meta">
-                        <span class="route-fare">Fare: R25.00</span>
-                        <button class="card-cta" onclick="location.href='card-registration.html'">
-                            Get Travel Card
-                        </button>
-                    </div>
-                </div>
-                
-                <table class="timetable-table">
-                    <thead>
-                        <tr>
-                            <th>Stops</th>
-                            <th>Arrival 1</th>
-                            <th>Arrival 2</th>
-                            <th>Frequency</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Summerstrand</td>
-                            <td>06:00</td>
-                            <td>06:45</td>
-                            <td>Every 30 minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Humewood</td>
-                            <td>06:15</td>
-                            <td>07:00</td>
-                            <td>Every 30 minutes</td>
-                        </tr>
-                        <!-- Add more rows as needed -->
-                    </tbody>
-                </table>
-            </div>
 
-            <div class="route-card" data-route="route2">
-                <div class="route-header">
-                    <h2 class="route-title">Route 2: Motherwell ↔ Greenacres</h2>
-                    <div class="route-meta">
-                        <span class="route-fare">Fare: R22.00</span>
-                        <button class="card-cta" onclick="location.href='card-registration.html'">
-                            Get Travel Card
-                        </button>
-                    </div>
-                </div>
-                <table class="timetable-table">
-                    <thead>
-                        <tr>
-                            <th>Stop</th>
-                            <th>Departure</th>
-                            <th>Arrival</th>
-                            <th>Frequency</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- POPULATE THESE ROWS WITH YOUR SCHEDULE DATA -->
-                        <tr>
-                            <td>Motherwell NU1</td>
-                            <td>06:30</td>
-                            <td>07:15</td>
-                            <td>Every 30 minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Motherwell NU2</td>
-                            <td>06:45</td>
-                            <td>07:30</td>
-                            <td>Every 30 minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Motherwell NU3</td>
-                            <td>07:00</td>
-                            <td>07:45</td>
-                            <td>Every 30 minutes</td>
-                        </tr>
-                        <!-- Add more rows as needed -->
-                    </tbody>
-                </table>
-            </div> 
+        <div
+          class="route-card"
+          data-route="route2"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        >
+          <div class="route-header">
+            <h2 class="route-title">Route 2: Motherwell ↔ Greenacres</h2>
+            <div class="route-meta">
+              <span class="route-fare">Fare: R22.00</span>
+              <button
+                class="card-cta"
+                onclick="location.href='card-registration.html'"
+              >
+                Get Travel Card
+              </button>
+            </div>
+          </div>
+          <table class="timetable-table">
+            <thead>
+              <tr>
+                <th>Stop</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Frequency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- POPULATE THESE ROWS WITH YOUR SCHEDULE DATA -->
+              <tr>
+                <td>Motherwell NU1</td>
+                <td>06:30</td>
+                <td>07:15</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <tr>
+                <td>Motherwell NU2</td>
+                <td>06:45</td>
+                <td>07:30</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <tr>
+                <td>Motherwell NU3</td>
+                <td>07:00</td>
+                <td>07:45</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
 
-            <div class="route-card" data-route="route3">
-                <div class="route-header">
-                    <h2 class="route-title">Route 3: KwaDwesi ↔ City</h2>
-                    <div class="route-meta  ">
-                        <span class="route-fare">Fare: R18.00</span>
-                        <button class="card-cta" onclick="location.href='card-registration.html'">
-                            Get Travel Card
-                        </button>
-                    </div>
-                </div>
-                <table class="timetable-table">
-                    <thead>
-                        <tr>
-                            <th>Stop</th>
-                            <th>Departure</th>
-                            <th>Arrival</th>
-                            <th>Frequency</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- POPULATE THESE ROWS WITH YOUR SCHEDULE DATA -->
-                        <tr>
-                            <td>Veeplaas</td>
-                            <td>07:00</td>
-                            <td>07:45</td>
-                            <td>Every 30 minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Zwide</td>
-                            <td>07:15</td>
-                            <td>08:00</td>
-                            <td>Every 30 minutes</td>
-                        </tr> 
-                        <tr>
-                            <td>Straundale</td>
-                            <td>07:30</td>
-                            <td>08:15</td>
-                            <td>Every 30 minutes</td>
-                        </tr>
-                        <!-- Add more rows as needed -->
-                    </tbody>   
-                </table>
+        <div
+          class="route-card"
+          data-route="route3"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <div class="route-header">
+            <h2 class="route-title">Route 3: KwaDwesi ↔ City</h2>
+            <div class="route-meta">
+              <span class="route-fare">Fare: R18.00</span>
+              <button
+                class="card-cta"
+                onclick="location.href='card-registration.html'"
+              >
+                Get Travel Card
+              </button>
             </div>
-            
-            <div class="route-card" data-route="route4">
-                <div class="route-header">
-                    <h2 class="route-title">Route 4: City ↔ NMU</h2>
-                    <div class="route-meta">
-                        <span class="route-fare">Fare: R20.00</span>
-                        <button class="card-cta" onclick="location.href='card-registration.html'">
-                            Get Travel Card
-                        </button>   
-                    </div>
-                </div>
-                <table class="timetable-table">
-                    <thead>
-                        <tr>
-                            <th>Stop</th>
-                            <th>Arrival 1</th>
-                            <th>Arrival 2</th>
-                            <th>Frequency</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- POPULATE THESE ROWS WITH YOUR SCHEDULE DATA -->
-                        <tr>
-                            <td>Norwich</td>
-                            <td>07:30</td>
-                            <td>08:15</td>
-                            <td>Every 30 minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Bird Str</td>
-                            <td>07:45</td>
-                            <td>08:30</td>
-                            <td>Every 30 minutes</td>
-                        </tr>
-                        <!-- Add more rows as needed -->
-                    </tbody>                    
-                </table>
-            </div>
-            
-            <div class="route-card" data-route="route5">
-                <div class="route-header">
-                    <h2 class="route-title">Route 5: Booysen Park ↔ City</h2>
-                    <div class="route-meta">
-                        <span class="route-fare">Fare: R21.00</span>
-                        <button class="card-cta" onclick="location.href='card-registration.html'">
-                            Get Travel Card
-                        </button>
-                    </div>
-                </div>
-                <table class="timetable-table">
-                    <thead>
-                        <tr>
-                            <th>Stop</th>
-                            <th>Arrival 1</th>
-                            <th>Arrival 2</th>
-                            <th>Frequency</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- POPULATE THESE ROWS WITH YOUR SCHEDULE DATA -->
-                        <tr>
-                            <td>Booysen Park</td>
-                            <td>08:00</td>
-                            <td>08:45</td>
-                            <td>Every 30 minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Cleary Park</td>
-                            <td>08:15</td>
-                            <td>09:00</td>
-                            <td>Every 30 minutes</td>
-                        </tr>
-                        <!-- Add more rows as needed -->            
-                    </tbody>
-                </table>
-            </div>
-            
-            <!-- Add more route cards as needed -->
+          </div>
+          <table class="timetable-table">
+            <thead>
+              <tr>
+                <th>Stop</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Frequency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- POPULATE THESE ROWS WITH YOUR SCHEDULE DATA -->
+              <tr>
+                <td>Veeplaas</td>
+                <td>07:00</td>
+                <td>07:45</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <tr>
+                <td>Zwide</td>
+                <td>07:15</td>
+                <td>08:00</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <tr>
+                <td>Straundale</td>
+                <td>07:30</td>
+                <td>08:15</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
 
+        <div
+          class="route-card"
+          data-route="route4"
+          data-aos="zoom-in-up"
+          data-aos-delay="300"
+        >
+          <div class="route-header">
+            <h2 class="route-title">Route 4: City ↔ NMU</h2>
+            <div class="route-meta">
+              <span class="route-fare">Fare: R20.00</span>
+              <button
+                class="card-cta"
+                onclick="location.href='card-registration.html'"
+              >
+                Get Travel Card
+              </button>
+            </div>
+          </div>
+          <table class="timetable-table">
+            <thead>
+              <tr>
+                <th>Stop</th>
+                <th>Arrival 1</th>
+                <th>Arrival 2</th>
+                <th>Frequency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- POPULATE THESE ROWS WITH YOUR SCHEDULE DATA -->
+              <tr>
+                <td>Norwich</td>
+                <td>07:30</td>
+                <td>08:15</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <tr>
+                <td>Bird Str</td>
+                <td>07:45</td>
+                <td>08:30</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+
+        <div
+          class="route-card"
+          data-route="route5"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <div class="route-header">
+            <h2 class="route-title">Route 5: Booysen Park ↔ City</h2>
+            <div class="route-meta">
+              <span class="route-fare">Fare: R21.00</span>
+              <button
+                class="card-cta"
+                onclick="location.href='card-registration.html'"
+              >
+                Get Travel Card
+              </button>
+            </div>
+          </div>
+          <table class="timetable-table">
+            <thead>
+              <tr>
+                <th>Stop</th>
+                <th>Arrival 1</th>
+                <th>Arrival 2</th>
+                <th>Frequency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- POPULATE THESE ROWS WITH YOUR SCHEDULE DATA -->
+              <tr>
+                <td>Booysen Park</td>
+                <td>08:00</td>
+                <td>08:45</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <tr>
+                <td>Cleary Park</td>
+                <td>08:15</td>
+                <td>09:00</td>
+                <td>Every 30 minutes</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- closes timetable-grid -->
     </main>
 
-    
     <div class="footer-basic">
       <footer>
         <div class="container">
@@ -304,7 +337,16 @@
           </div>
 
           <div class="col-md-4 footer-image text-center">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.445455160971!2d25.58157157430237!3d-33.929669322211694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ad3c27469b6ad%3A0x9171bba5e52a145b!2s85%20Perl%20Rd%2C%20Korsten%2C%20Gqeberha%2C%206020!5e0!3m2!1sen!2sza!4v1748537426956!5m2!1sen!2sza" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.445455160971!2d25.58157157430237!3d-33.929669322211694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ad3c27469b6ad%3A0x9171bba5e52a145b!2s85%20Perl%20Rd%2C%20Korsten%2C%20Gqeberha%2C%206020!5e0!3m2!1sen!2sza!4v1748537426956!5m2!1sen!2sza"
+              width="400"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </footer>
       <div class="row">
@@ -319,33 +361,38 @@
         </div>
       </div>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        // Basic filter functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const routeFilter = document.getElementById('route-filter');
-            const dayFilter = document.getElementById('day-filter');
-            const routeCards = document.querySelectorAll('.route-card');
-            
-            function applyFilters() {
-                const selectedRoute = routeFilter.value;
-                const selectedDay = dayFilter.value;
-                
-                routeCards.forEach(card => {
-                    const route = card.dataset.route;
-                    const showCard = (selectedRoute === 'all' || selectedRoute === route);
-                    card.style.display = showCard ? 'block' : 'none';
-                    
-                    // Note: Add day-specific filtering logic here when you implement day-specific schedules
-                });
-            }
-            
-            routeFilter.addEventListener('change', applyFilters);
-            dayFilter.addEventListener('change', applyFilters);
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        const routeFilter = document.getElementById("route-filter");
+        const dayFilter = document.getElementById("day-filter");
+        const routeCards = document.querySelectorAll(".route-card");
+
+        function applyFilters() {
+          const selectedRoute = routeFilter.value;
+          const selectedDay = dayFilter.value;
+
+          routeCards.forEach((card) => {
+            const route = card.dataset.route;
+            const showCard = selectedRoute === "all" || selectedRoute === route;
+            card.style.display = showCard ? "block" : "none";
+          });
+
+          AOS.refresh();
+        }
+
+        routeFilter.addEventListener("change", applyFilters);
+        dayFilter.addEventListener("change", applyFilters);
+      });
+
+      AOS.init({
+        duration: 1000, // Animation duration in ms
+        once: true, // Only animate once on scroll
+      });
     </script>
-</body>
+  </body>
 </html>
